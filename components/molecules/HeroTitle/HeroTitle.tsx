@@ -2,6 +2,7 @@ import { Title, Text } from "@mantine/core";
 import { TypewriterText } from "@components/molecules/TypewriterText";
 import { VerticalScrollingText } from "../VerticalScrollingText";
 import useStyles from "./HeroTitle.styles";
+import { meta } from "@components/templates/meta";
 
 export function HeroTitle() {
   const { classes, cx } = useStyles();
@@ -15,27 +16,17 @@ export function HeroTitle() {
         className={cx(classes.header, classes.subheader)}
         inherit
       >
-        Hello there! I&apos;m
+        {meta.heading}
       </Text>
 
       <Title className={cx(classes.header, classes.title)}>
-        <TypewriterText text="Zekken Yuuki" />
+        <TypewriterText text={meta.name} />
       </Title>
 
-      <VerticalScrollingText
-        textArray={[
-          "Front-end Developer",
-          "Software Engineer",
-          "Web Developer",
-          "Cloud Practitioner",
-          "Full-stack Developer",
-          "Shopify Developer",
-        ]}
-      />
+      <VerticalScrollingText textArray={meta.titles} />
 
       <Text className={classes.content} color="dimmed" mt="md">
-        A self-taught developer with a passion for tech & knowledge and
-        curiosity to learn even more!
+        {meta.description}
       </Text>
     </>
   );
