@@ -1,0 +1,1 @@
+export { VerticalScrollingText } from "./VerticalScrollingText";
