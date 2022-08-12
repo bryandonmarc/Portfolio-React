@@ -1,5 +1,5 @@
 import { Button, Group } from "@mantine/core";
-import { IconDownload, IconLink } from "@tabler/icons";
+import { IconDownload } from "@tabler/icons";
 import useStyles from "./HeroActions.styles";
 
 export function HeroActions() {
@@ -8,7 +8,6 @@ export function HeroActions() {
   return (
     <Group mt={30}>
       <Button
-        leftIcon={<IconLink size={16} />}
         variant="gradient"
         gradient={{ from: "grape", to: "indigo" }}
         radius="md"

@@ -1,4 +1,5 @@
 export { GradientBackground } from "./GradientBackground";
+export { StaggeredTransition } from "./StaggeredTransition";
 
 export { HeaderControl } from "./HeaderControl";
 export { Logo } from "./Logo";
