@@ -9,10 +9,13 @@ export default createStyles((theme) => ({
   },
 
   main: {
-    scrollMarginTop: HEADER_HEIGHT,
     flex: 1,
-    paddingTop: HEADER_HEIGHT,
   },
+
+  // headerPadding: {
+  //   scrollMarginTop: HEADER_HEIGHT,
+  //   paddingTop: HEADER_HEIGHT,
+  // },
 
   bodyColor: {
     color:
@@ -29,7 +32,7 @@ export default createStyles((theme) => ({
   },
 
   content: {
-    minHeight: `calc(100vh - ${HEADER_HEIGHT}px)`,
+    minHeight: "100vh",
     position: "relative",
     height: "100%",
     overflow: "hidden",

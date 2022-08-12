@@ -12,6 +12,7 @@ import {
 import { Header } from "@components/organisms";
 
 import useStyles from "./Layout.styles";
+import { useWindowScroll } from "@mantine/hooks";
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -90,7 +91,8 @@ function getActions(): SpotlightAction[] {
 }
 
 export function LayoutInner({ children }: LayoutProps) {
-  const { classes } = useStyles();
+  const { classes, cx } = useStyles();
+  const [scroll] = useWindowScroll();
 
   return (
     <SpotlightProvider

@@ -4,33 +4,33 @@ import Link from "next/link";
 import { Icon3dCubeSphere as IconHome } from "@tabler/icons";
 import { Anchor } from "@mantine/core";
 
-interface LogoProps {
-  logoProps: string;
-}
-
-export function Logo({ logoProps }: LogoProps) {
+export function Logo() {
   const { classes } = useStyles();
 
   return (
-    <Link href="/" className={classes.logo} aria-label="Home">
-      <Anchor
-        sx={(theme) => ({
-          color:
-            theme.colorScheme === "dark"
-              ? theme.colors.dark[1]
-              : theme.colors.gray[8],
+    <div className={classes.logoWrapper}>
+      <div className={classes.logoContainer}>
+        <Link href="/" className={classes.logo} aria-label="Home">
+          <Anchor
+            sx={(theme) => ({
+              color:
+                theme.colorScheme === "dark"
+                  ? theme.colors.dark[1]
+                  : theme.colors.gray[8],
 
-          ...theme.fn.hover({
-            color:
-              theme.colorScheme === "dark"
-                ? theme.colors.dark[0]
-                : theme.colors.gray[9],
-          }),
-        })}
-        className={logoProps}
-      >
-        <IconHome size={32} />
-      </Anchor>
-    </Link>
+              ...theme.fn.hover({
+                color:
+                  theme.colorScheme === "dark"
+                    ? theme.colors.dark[0]
+                    : theme.colors.gray[9],
+              }),
+            })}
+            className={classes.logoContainer}
+          >
+            <IconHome size={32} />
+          </Anchor>
+        </Link>
+      </div>
+    </div>
   );
 }

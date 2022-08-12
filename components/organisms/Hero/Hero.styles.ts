@@ -1,7 +1,14 @@
 import { createStyles } from "@mantine/core";
+import { HEADER_HEIGHT } from "@components/organisms";
 import { relative } from "path";
 
 export default createStyles((theme) => ({
+  cover: {
+    maxWidth: "100vw",
+
+    marginTop: `calc(${theme.spacing.lg * 4}px + ${HEADER_HEIGHT}px)`,
+  },
+
   inner: {
     display: "flex",
     justifyContent: "space-between",
@@ -11,7 +18,6 @@ export default createStyles((theme) => ({
   content: {
     maxWidth: 640,
     width: "100%",
-    marginTop: theme.spacing.lg * 3,
 
     [theme.fn.smallerThan("lg")]: {
       marginLeft: theme.spacing.lg,

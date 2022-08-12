@@ -24,23 +24,9 @@ export default createStyles((theme) => ({
     },
   },
 
-  logo: {
-    paddingRight: theme.spacing.md,
-    paddingLeft: theme.spacing.md,
-    height: HEADER_HEIGHT,
-    display: "flex",
-    alignItems: "center",
-  },
-
   mainSection: {
     display: "flex",
     alignItems: "center",
-  },
-
-  logoWrapper: {
-    display: "flex",
-    alignItems: "center",
-    pointerEvents: "all",
   },
 
   version: {
