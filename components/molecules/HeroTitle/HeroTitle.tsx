@@ -2,10 +2,21 @@ import { Title, Text } from "@mantine/core";
 import { TypewriterText } from "@components/molecules/TypewriterText";
 import { VerticalScrollingText } from "../VerticalScrollingText";
 import useStyles from "./HeroTitle.styles";
-import { meta } from "@components/templates/meta";
 import { StaggeredTransition } from "@components/atoms";
 
-export function HeroTitle() {
+export interface HeroTitleProps {
+  heading: string;
+  name: string;
+  titles: string[];
+  description: string;
+}
+
+export function HeroTitle({
+  heading,
+  name,
+  titles,
+  description,
+}: HeroTitleProps) {
   const { classes, cx } = useStyles();
 
   return (
@@ -17,17 +28,17 @@ export function HeroTitle() {
         className={cx(classes.header, classes.subheader)}
         inherit
       >
-        {meta.hero.heading}
+        {heading}
       </Text>
 
       <Title className={cx(classes.header, classes.title)}>
-        <TypewriterText text={meta.hero.name} />
+        <TypewriterText text={name} />
       </Title>
 
-      <VerticalScrollingText textArray={meta.hero.titles} />
+      <VerticalScrollingText textArray={titles} />
 
       <Text className={classes.content} color="dimmed" mt="md">
-        {meta.hero.description}
+        {description}
       </Text>
     </StaggeredTransition>
   );

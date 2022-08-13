@@ -1,10 +1,14 @@
-import { Hero } from "@components/organisms";
+import { Hero, HeroProps } from "@components/organisms";
 
-export function HomePage() {
+export interface HomePageProps {
+  heroProps: HeroProps;
+}
+
+export function HomePage({ heroProps }: HomePageProps) {
   return (
     <>
-      <Hero />
-      <Hero />
+      <Hero {...heroProps} />
+      <Hero {...heroProps} />
     </>
   );
 }

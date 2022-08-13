@@ -4,8 +4,19 @@ import { HeroTitle, HeroContent, HeroActions } from "@components/molecules";
 import useStyles from "./Hero.styles";
 import img from "@assets/images/avatar-half-suit.png";
 import { GradientBackground, StaggeredTransition } from "@components/atoms";
+import {
+  HeroTitleProps,
+  HeroContentProps,
+  HeroActionsProps,
+} from "@components/molecules";
 
-export function Hero() {
+export interface HeroProps {
+  title: HeroTitleProps;
+  content: HeroContentProps;
+  actions: HeroActionsProps;
+}
+
+export function Hero({ title, content, actions }: HeroProps) {
   const { classes } = useStyles();
 
   return (
@@ -21,9 +32,9 @@ export function Hero() {
               sx={{ flexDirection: "column" }}
             >
               <StaggeredTransition delay={[0, 3, 4]}>
-                <HeroTitle />
-                <HeroContent />
-                <HeroActions />
+                <HeroTitle {...title} />
+                <HeroContent {...content} />
+                <HeroActions {...actions} />
               </StaggeredTransition>
             </Group>
             <Image

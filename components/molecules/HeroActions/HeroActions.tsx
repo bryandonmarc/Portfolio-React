@@ -2,7 +2,12 @@ import { Button, Group } from "@mantine/core";
 import { IconDownload } from "@tabler/icons";
 import useStyles from "./HeroActions.styles";
 
-export function HeroActions() {
+export interface HeroActionsProps {
+  primary: string;
+  secondary: string;
+}
+
+export function HeroActions({ primary, secondary }: HeroActionsProps) {
   const { classes } = useStyles();
 
   return (
@@ -14,7 +19,7 @@ export function HeroActions() {
         size="md"
         className={classes.control}
       >
-        About Me
+        {primary}
       </Button>
 
       <Button
@@ -29,7 +34,7 @@ export function HeroActions() {
           },
         })}
       >
-        Resume
+        {secondary}
       </Button>
     </Group>
   );
