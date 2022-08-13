@@ -1,30 +1,32 @@
-import { Box, SimpleGrid } from "@mantine/core";
+import { Container, SimpleGrid } from "@mantine/core";
 import { StatsCard, StatsCardProps } from "./StatsCard";
 
-interface StatsGridProps {
-  data: StatsCardProps[];
+export interface StatsGridProps {
+  stats: StatsCardProps[];
 }
 
-export function StatsGrid({ data }: StatsGridProps) {
+export function StatsGrid({ stats }: StatsGridProps) {
   return (
-    <Box
+    <Container
+      size="xl"
       sx={(theme) => ({
         root: {
           padding: theme.spacing.xl * 1.5,
         },
+        paddingBottom: theme.spacing.xl * 1.5,
       })}
     >
       <SimpleGrid
-        cols={4}
+        cols={stats.length}
         breakpoints={[
           { maxWidth: "md", cols: 2 },
           { maxWidth: "xs", cols: 1 },
         ]}
       >
-        {data.map((props, i) => (
+        {stats.map((props, i) => (
           <StatsCard key={i} {...props}></StatsCard>
         ))}
       </SimpleGrid>
-    </Box>
+    </Container>
   );
 }

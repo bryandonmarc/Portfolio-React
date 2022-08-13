@@ -16,3 +16,9 @@ export { KofiIcon, LinkedInIcon, GithubIcon } from "./Icons";
 
 export { StatsCard } from "./StatsCard";
 export { StatsGrid } from "./StatsGrid";
+export { SkillCard } from "./SkillCard";
+export { SkillGrid } from "./SkillGrid";
+
+export type { StatsGridProps } from "./StatsGrid";
+export type { SkillCardProps } from "./SkillCard";
+export type { SkillGridProps } from "./SkillGrid";
