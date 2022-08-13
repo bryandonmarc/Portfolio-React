@@ -13,3 +13,6 @@ export {
 } from "./HeaderControls";
 
 export { KofiIcon, LinkedInIcon, GithubIcon } from "./Icons";
+
+export { StatsCard } from "./StatsCard";
+export { StatsGrid } from "./StatsGrid";
