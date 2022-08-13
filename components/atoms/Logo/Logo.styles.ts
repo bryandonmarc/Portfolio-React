@@ -15,6 +15,11 @@ export default createStyles((theme) => ({
     height: HEADER_HEIGHT,
     display: "flex",
     alignItems: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      paddingRight: 0,
+      paddingLeft: 0,
+    },
   },
 
   logoWrapper: {

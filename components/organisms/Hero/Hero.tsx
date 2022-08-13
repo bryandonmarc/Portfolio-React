@@ -13,7 +13,7 @@ export function Hero() {
       <Center className={classes.cover}>
         <GradientBackground />
         <Container size="xl">
-          <Group className={classes.inner}>
+          <div className={classes.inner}>
             <Group
               className={classes.content}
               spacing={0}
@@ -35,7 +35,7 @@ export function Hero() {
               sizes="100vw"
               alt="Zekken Yuuki"
             />
-          </Group>
+          </div>
         </Container>
       </Center>
     </>

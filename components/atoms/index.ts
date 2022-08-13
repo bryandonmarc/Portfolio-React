@@ -9,6 +9,7 @@ export {
   LinkedInControl,
   GithubControl,
   ColorSchemeControl,
+  SearchControlMobile,
 } from "./HeaderControls";
 
 export { KofiIcon, LinkedInIcon, GithubIcon } from "./Icons";
