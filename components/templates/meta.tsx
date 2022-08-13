@@ -63,7 +63,7 @@ export const meta: MetaFields = {
         heading: "#Freelance ",
         description: (
           <>
-            Currently building beautiful, custom
+            Currently building beautiful, custom&nbsp;
             <ThemeIcon
               size="lg"
               radius="xl"
