@@ -24,9 +24,13 @@ export default createStyles((theme) => ({
     ...theme.fn.cover(),
     height: "inherit",
     zIndex: -2,
-    backgroundImage: `linear-gradient(${
-      theme.colorScheme === "dark" ? "0deg" : "180deg"
-    }, ${theme.colorScheme === "dark" ? theme.colors.dark[7] : "#fff"} 50%, 
+    backgroundImage: `linear-gradient(0deg, ${
+      theme.colorScheme === "dark" ? theme.colors.dark[7] : "#fff"
+    } 50%, 
         rgba(255, 255, 255, 0) 100%);`,
+    // backgroundImage: `linear-gradient(${
+    //   theme.colorScheme === "dark" ? "0deg" : "180deg"
+    // }, ${theme.colorScheme === "dark" ? theme.colors.dark[7] : "#fff"} 50%,
+    //     rgba(255, 255, 255, 0) 100%);`,
   },
 }));
