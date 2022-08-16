@@ -27,16 +27,13 @@ export function AboutContent({
     <Container size="xl" mb={theme.spacing.xl}>
       <div className={classes.inner}>
         <SkillGrid {...skillGrid} />
-        <Group
-          className={classes.content}
-          spacing={0}
-          align="start"
-          sx={{ flexDirection: "column" }}
-        >
-          <Title order={2} className={classes.title}>
-            {heading}
-          </Title>
-          <TypographyStylesProvider>{markdown}</TypographyStylesProvider>
+        <Group className={classes.content} spacing={0} align="start">
+          <div>
+            <Title order={2} className={classes.title}>
+              {heading}
+            </Title>
+            <TypographyStylesProvider>{markdown}</TypographyStylesProvider>
+          </div>
           <AboutActions {...actions} />
         </Group>
       </div>

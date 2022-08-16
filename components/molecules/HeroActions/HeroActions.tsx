@@ -1,4 +1,4 @@
-import { Button, Group } from "@mantine/core";
+import { Button, Group, useMantineTheme } from "@mantine/core";
 import { IconDownload } from "@tabler/icons";
 import useStyles from "./HeroActions.styles";
 
@@ -9,6 +9,7 @@ export interface HeroActionsProps {
 
 export function HeroActions({ primary, secondary }: HeroActionsProps) {
   const { classes } = useStyles();
+  const theme = useMantineTheme();
 
   return (
     <Group mt={30}>
@@ -23,14 +24,17 @@ export function HeroActions({ primary, secondary }: HeroActionsProps) {
       </Button>
 
       <Button
-        leftIcon={<IconDownload size={16} />}
-        variant="outline"
+        leftIcon={<IconDownload size={20} />}
+        variant={theme.colorScheme === "dark" ? "light" : "outline"}
         size="md"
         radius="md"
         className={classes.control}
         sx={(theme) => ({
           "&:hover": {
-            color: theme.white,
+            color:
+              theme.colorScheme === "dark"
+                ? theme.white
+                : theme.colors.violet[6],
           },
         })}
       >

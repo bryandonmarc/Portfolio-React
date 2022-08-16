@@ -24,7 +24,9 @@ export function HeroContent({ contents }: HeroContentProps) {
               lineHeight: 1,
             }}
           >
-            <b>{listItem.heading}</b>&nbsp;–&nbsp;{listItem.description}
+            <b>{listItem.heading}</b>
+            <span>&nbsp;–&nbsp;</span>
+            {listItem.description}
           </Text>
         </List.Item>
       ))}

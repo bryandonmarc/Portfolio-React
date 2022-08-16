@@ -1,3 +1,4 @@
+import { ScrollIcon } from "@components/atoms";
 import { Title, Text, Container } from "@mantine/core";
 import useStyles from "./AboutTitle.styles";
 import { Dots } from "./Dots";
@@ -12,6 +13,8 @@ export function AboutTitle({ title, description }: AboutTitleProps) {
 
   return (
     <div className={classes.wrapper}>
+      <ScrollIcon />
+
       <Dots className={classes.dots} style={{ left: 0, top: 0 }} />
       <Dots className={classes.dots} style={{ left: 60, top: 0 }} />
       <Dots className={classes.dots} style={{ left: 0, top: 140 }} />
@@ -21,7 +24,12 @@ export function AboutTitle({ title, description }: AboutTitleProps) {
         <Title className={classes.title}>{title(classes.highlight)}</Title>
 
         <Container p={0} size={600}>
-          <Text size="sm" color="dimmed" className={classes.description}>
+          <Text
+            size="sm"
+            color="dimmed"
+            px="xs"
+            className={classes.description}
+          >
             {description}
           </Text>
         </Container>

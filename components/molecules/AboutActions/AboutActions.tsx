@@ -1,35 +1,48 @@
-import { Button, Group } from "@mantine/core";
-import { IconDownload } from "@tabler/icons";
+import { Button, Group, useMantineTheme } from "@mantine/core";
+import { IconDownload, TablerIcon } from "@tabler/icons";
 import useStyles from "./AboutActions.styles";
 
 export interface AboutActionsProps {
   primary: string;
   secondary: string;
+  IconPrimary?: TablerIcon;
+  IconSecondary?: TablerIcon;
 }
 
-export function AboutActions({ primary, secondary }: AboutActionsProps) {
+export function AboutActions({
+  primary,
+  secondary,
+  IconPrimary,
+  IconSecondary,
+}: AboutActionsProps) {
   const { classes } = useStyles();
+  const theme = useMantineTheme();
 
   return (
     <Group>
       <Button
         variant="gradient"
         gradient={{ from: "grape", to: "indigo" }}
-        radius="md"
         size="md"
+        radius="md"
+        leftIcon={IconPrimary && <IconPrimary size={20} />}
         className={classes.control}
       >
         {primary}
       </Button>
 
       <Button
-        variant="outline"
+        variant={theme.colorScheme === "dark" ? "light" : "outline"}
         size="md"
         radius="md"
+        leftIcon={IconSecondary && <IconSecondary size={20} />}
         className={classes.control}
         sx={(theme) => ({
           "&:hover": {
-            color: theme.white,
+            color:
+              theme.colorScheme === "dark"
+                ? theme.white
+                : theme.colors.violet[6],
           },
         })}
       >

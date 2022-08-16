@@ -11,15 +11,17 @@ export default createStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     gap: theme.spacing.lg,
+    flexDirection: "row",
+
+    [theme.fn.smallerThan("md")]: {
+      flexDirection: "column-reverse",
+      gap: theme.spacing.xl * 1.5,
+    },
   },
 
   content: {
     maxWidth: 640,
     width: "100%",
-
-    [theme.fn.smallerThan("lg")]: {
-      marginLeft: theme.spacing.lg,
-    },
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",

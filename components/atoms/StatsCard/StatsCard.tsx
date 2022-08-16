@@ -8,18 +8,19 @@ import {
   MantineColor,
 } from "@mantine/core";
 import { useElementSize } from "@mantine/hooks";
+import { TablerIcon } from "@tabler/icons";
 import useStyles from "./StatsCard.styles";
 
 const ICON_SIZE = 60;
 
 export interface StatsCardProps {
-  icon: React.ReactNode;
+  Icon: TablerIcon;
   title: string;
   percentage: number;
   color: MantineColor;
 }
 
-export function StatsCard({ icon, title, percentage, color }: StatsCardProps) {
+export function StatsCard({ Icon, title, percentage, color }: StatsCardProps) {
   const { classes } = useStyles();
   const { ref, width } = useElementSize();
 
@@ -31,7 +32,7 @@ export function StatsCard({ icon, title, percentage, color }: StatsCardProps) {
         size={ICON_SIZE}
         radius={ICON_SIZE}
       >
-        {icon}
+        <Icon size={28} stroke={1.5} />
       </ThemeIcon>
 
       <Text align="center" weight={700} className={classes.title}>
@@ -44,9 +45,9 @@ export function StatsCard({ icon, title, percentage, color }: StatsCardProps) {
         style={{ width: "100%", position: "relative" }}
       >
         <Text size="xs" color="dimmed">
-          Competent
+          Proficient
         </Text>
-        <Text
+        {/* <Text
           ref={ref}
           sx={{
             position: "absolute",
@@ -56,7 +57,7 @@ export function StatsCard({ icon, title, percentage, color }: StatsCardProps) {
           color="dimmed"
         >
           Proficient
-        </Text>
+        </Text> */}
         <Text size="xs" color="dimmed">
           Expert
         </Text>

@@ -23,7 +23,7 @@ export function Hero({ title, content, actions }: HeroProps) {
     <>
       <Center className={classes.cover}>
         <GradientBackground />
-        <Container size="xl">
+        <Container size={1420}>
           <div className={classes.inner}>
             <Group
               className={classes.content}

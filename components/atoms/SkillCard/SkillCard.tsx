@@ -1,26 +1,23 @@
-import {
-  UnstyledButton,
-  Text,
-  MantineColor,
-  MantineTheme,
-} from "@mantine/core";
+import { Text, MantineColor, Box } from "@mantine/core";
+import { TablerIcon } from "@tabler/icons";
 import useStyles from "./SkillCard.styles";
 
 export interface SkillCardProps {
+  id: number;
   title: string;
-  icon: (theme: MantineTheme, color: MantineColor) => React.ReactNode;
+  Icon: TablerIcon;
   color: MantineColor;
 }
 
-export function SkillCard({ title, icon, color }: SkillCardProps) {
-  const { classes, theme } = useStyles();
+export function SkillCard({ title, Icon, color }: SkillCardProps) {
+  const { classes } = useStyles({ color });
 
   return (
-    <UnstyledButton className={classes.item}>
-      {icon(theme, color)}
+    <Box className={classes.item}>
+      <Icon className={classes.icon} size={32}></Icon>
       <Text size="xs" mt={7}>
         {title}
       </Text>
-    </UnstyledButton>
+    </Box>
   );
 }

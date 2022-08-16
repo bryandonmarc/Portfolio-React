@@ -15,7 +15,7 @@ export default createStyles((theme) => ({
   },
 
   content: {
-    maxWidth: 640,
+    maxWidth: 780,
     width: "100%",
 
     [theme.fn.smallerThan("lg")]: {

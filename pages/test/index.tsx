@@ -22,6 +22,12 @@ import {
   IconBrandFirebase,
   IconBrandPython,
   IconBrandPhp,
+  IconDatabase,
+  TablerIcon,
+  Icon3dCubeSphere,
+  IconCSharp,
+  IconAppWindow,
+  IconPhoneIncoming,
 } from "@tabler/icons";
 import { Icon } from "@iconify/react/dist/offline";
 import Shopify from "@iconify-icons/logos/shopify";
@@ -37,8 +43,6 @@ const homePage: HomePageProps = {
         "Front-end Developer",
         "Software Engineer",
         "Web Developer",
-        "Cloud Practitioner",
-        "Full-stack Developer",
         "Shopify Developer",
       ],
 
@@ -60,7 +64,9 @@ const homePage: HomePageProps = {
             </ThemeIcon>
           ),
           heading: "#OpenToWork ",
-          description: "Exploring career opportunities and growth projects.",
+          description: (
+            <span>Exploring career opportunities and growth projects.</span>
+          ),
         },
         {
           icon: (
@@ -76,7 +82,7 @@ const homePage: HomePageProps = {
           heading: "#Freelance ",
           description: (
             <>
-              Currently building beautiful, custom&nbsp;
+              <span>Currently building beautiful, custom&nbsp;</span>
               <ThemeIcon
                 size="lg"
                 radius="xl"
@@ -90,7 +96,7 @@ const homePage: HomePageProps = {
               >
                 <Icon style={{ fontSize: "24px" }} icon={Shopify} />
               </ThemeIcon>
-              themes at&nbsp;
+              <span>themes at&nbsp;</span>
               <Anchor
                 href="https://artologie.co/"
                 target="_blank"
@@ -143,28 +149,28 @@ const homePage: HomePageProps = {
     statsGrid: {
       stats: [
         {
-          icon: <IconWorld size={28} stroke={1.5} />,
+          Icon: IconWorld,
           title: "Web Development",
           color: "violet",
+          percentage: 63,
+        },
+        {
+          Icon: IconBrush,
+          title: "Front-end Development",
+          color: "grape",
           percentage: 74,
         },
         {
-          icon: <IconBrush size={28} stroke={1.5} />,
-          title: "Front-end Development",
-          color: "grape",
-          percentage: 81,
-        },
-        {
-          icon: <IconServer size={28} stroke={1.5} />,
+          Icon: IconServer,
           title: "Back-end Development",
           color: "indigo",
-          percentage: 68,
+          percentage: 36,
         },
         {
-          icon: <IconTool size={28} stroke={1.5} />,
+          Icon: IconTool,
           title: "Software Development",
           color: "cyan",
-          percentage: 63,
+          percentage: 45,
         },
       ],
     },
@@ -178,162 +184,131 @@ const homePage: HomePageProps = {
             I&apos;m {meta.name}. Ever since I was a kid, I&apos;ve always loved
             computers and video games, which led me into taking a degree in{" "}
             <b>Computer Science</b>, because it had the word
-            &lsquo;computer&rsquo; in it 😅 But I&apos;m glad I did! It was one
-            of the most satisfying decisions I&apos;ve ever made.
+            &lsquo;computer&rsquo; in it 😅. But I&apos;m glad I did! It was one
+            of the most fulfilling decisions I&apos;ve ever made.
           </p>
           <p>
-            I&apos;m a Bachelor of Computer Science graduate with{" "}
-            <b>Magna Cum Laude</b> latin honors. I held{" "}
-            <b>leadership positions</b> in our college council and national and
-            international organizations&apos; student chapters that involves the
-            field of computing and ICT. I am a recipient of the OWWA EDSP
-            scholarship, a competitive program that only selects top students
-            across all regions of the Philippines qualified by DOST-SEI.
+            I&apos;m a Computer Science graduate and a <b>Magna Cum Laude</b> 📖{" "}
+            latin honor candidate . I held <b>leadership positions</b> in our
+            college council and our university&apos;s student chapters of
+            national and international organizations involving the field of
+            computing and ICT. I am a recipient of the OWWA EDSP scholarship, a
+            competitive program that only selects top students across all
+            regions of the Philippines qualified by DOST-SEI.
           </p>
           <p>
-            Knowledge is my <b>passion</b>, and programming more so. I am fully
-            competent in various frameworks and languages, and eager and
+            Knowledge is my <b>passion</b>, and programming even more so. I am
+            fully competent in various frameworks and languages, and eager and
             persistent to learn even more! I am open and looking for{" "}
             <b>job opportunities</b> where I can grow and fully utilize my
-            passion. See the projects I&apos;ve worked on, and please don&apos;t
-            hesistate to contact me once you decide you&apos;d want us to work
-            together! 😉
+            passion. Not sold yet? See the projects I&apos;ve worked on, and
+            don&apos;t hesistate to contact me once you decide you&apos;d want
+            us to work together! 😉
           </p>
         </>
       ),
 
       skillGrid: {
-        heading: "My Tech Stack",
+        heading: "I'm confident with...",
+        subheading: "+ many more!",
         skills: [
           {
-            title: "HTML5",
-            icon: (theme, color) => (
-              <IconBrandHtml5 color={theme.colors[color][6]} size={32} />
-            ),
+            id: 1,
+            title: "HTML",
+            Icon: IconBrandHtml5,
             color: "orange",
           },
           {
-            title: "CSS3",
-            icon: (theme, color) => (
-              <IconBrandCss3 color={theme.colors[color][6]} size={32} />
-            ),
+            id: 2,
+            title: "CSS",
+            Icon: IconBrandCss3,
             color: "blue",
           },
           {
-            title: "JavaScript ES6",
-            icon: (theme, color) => (
-              <IconBrandJavascript color={theme.colors[color][6]} size={32} />
-            ),
+            id: 3,
+            title: "JavaScript",
+            Icon: IconBrandJavascript,
             color: "yellow",
           },
           {
-            title: "NodeJS",
-            icon: (theme, color) => (
-              <IconHexagon color={theme.colors[color][6]} size={32} />
-            ),
-            color: "lime",
-          },
-          {
+            id: 4,
             title: "React",
-            icon: (theme, color) => (
-              <IconBrandReactNative color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandReactNative,
             color: "cyan",
           },
           {
+            id: 5,
             title: "Vue",
-            icon: (theme, color) => (
-              <IconBrandVue color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandVue,
             color: "green",
           },
           {
-            title: "Git",
-            icon: (theme, color) => (
-              <IconBrandGit color={theme.colors[color][6]} size={32} />
-            ),
-            color: "orange",
+            id: 6,
+            title: "NodeJS",
+            Icon: IconHexagon,
+            color: "lime",
           },
           {
+            id: 7,
             title: "NextJS",
-            icon: (theme, color) => (
-              <IconBrandNextjs color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandNextjs,
             color: "gray",
           },
           {
+            id: 8,
             title: "NuxtJS",
-            icon: (theme, color) => (
-              <IconBrandNuxt color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandNuxt,
             color: "teal",
           },
           {
+            id: 9,
+            title: "MySQL",
+            Icon: IconDatabase,
+            color: "blue",
+          },
+          {
+            id: 10,
             title: "TailwindCSS",
-            icon: (theme, color) => (
-              <IconBrandTailwind color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandTailwind,
             color: "cyan",
           },
           {
+            id: 11,
             title: "Sass",
-            icon: (theme, color) => (
-              <IconBrandSass color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandSass,
             color: "pink",
           },
           {
+            id: 12,
             title: "Firebase",
-            icon: (theme, color) => (
-              <IconBrandFirebase color={theme.colors[color][6]} size={32} />
-            ),
+            Icon: IconBrandFirebase,
             color: "orange",
           },
-          {
-            title: "Python",
-            icon: (theme, color) => (
-              <IconBrandPython color={theme.colors[color][6]} size={32} />
-            ),
-            color: "yellow",
-          },
-          {
-            title: "Unity",
-            icon: (theme, color) => (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-unity"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke={theme.colors[color][6]}
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M2 13h11l5 -10"></path>
-                <path d="M6.5 18l-4.5 -5l4.5 -5"></path>
-                <path d="M13 13l5 8"></path>
-                <path d="M11.5 4l6.5 -1l2 6"></path>
-                <path d="M20 15l-2 6l-6.5 -.5"></path>
-              </svg>
-            ),
-            color: "gray",
-          },
-          {
-            title: "PHP",
-            icon: (theme, color) => (
-              <IconBrandPhp color={theme.colors[color][6]} size={32} />
-            ),
-            color: "indigo",
-          },
+          // {
+          //   id: 13,
+          //   title: "Python",
+          //   Icon: IconBrandPython,
+          //   color: "yellow",
+          // },
+          // {
+          //   id: 14,
+          //   title: "PHP",
+          //   Icon: IconBrandPhp,
+          //   color: "indigo",
+          // },
+          // {
+          //   id: 15,
+          //   title: "C-Sharp",
+          //   Icon: IconCSharp,
+          //   color: "violet",
+          // },
         ],
       },
 
       actions: {
-        primary: "Contact Me",
-        secondary: "Projects",
+        primary: "See Projects",
+        secondary: "Contact Me",
+        IconSecondary: IconPhoneIncoming,
       },
     },
   },

@@ -4,7 +4,7 @@ export default createStyles((theme) => ({
   wrapper: {
     position: "relative",
     marginTop: theme.spacing.lg * 5,
-    paddingTop: 120,
+    paddingTop: 160,
     paddingBottom: 40,
 
     [theme.fn.smallerThan("md")]: {

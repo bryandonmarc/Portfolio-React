@@ -36,7 +36,7 @@ export default createStyles((theme, { itemCount }: { itemCount: number }) => ({
     marginTop: 0,
     marginBottom: 0,
     padding: 0,
-    animation: `${scrollUp(itemCount)} 8s infinite`,
+    animation: `${scrollUp(itemCount)} ${(4 / 3) * (itemCount - 1)}s infinite`,
     animationDelay: "2s",
   },
 
