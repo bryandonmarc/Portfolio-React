@@ -5,6 +5,7 @@ import {
   AboutTitle,
   AboutTitleProps,
 } from "@components/molecules";
+import { Box } from "@mantine/core";
 
 export interface AboutProps {
   title: AboutTitleProps;
@@ -14,10 +15,10 @@ export interface AboutProps {
 
 export function About({ title, statsGrid, content }: AboutProps) {
   return (
-    <>
+    <Box component="section">
       <AboutTitle {...title} />
       <StatsGrid {...statsGrid} />
       <AboutContent {...content} />
-    </>
+    </Box>
   );
 }

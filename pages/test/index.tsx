@@ -23,7 +23,6 @@ import {
   IconBrandPython,
   IconBrandPhp,
   IconDatabase,
-  TablerIcon,
   Icon3dCubeSphere,
   IconCSharp,
   IconAppWindow,
