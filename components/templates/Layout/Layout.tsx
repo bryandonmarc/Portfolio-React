@@ -8,6 +8,7 @@ import {
 import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import { LayoutInner, LayoutProps } from "./LayoutInner";
 import { ThemeContext } from "@emotion/react";
+import Head from "next/head";
 // import { GreycliffCF } from "../../fonts/GreycliffCF/GreycliffCF";
 
 const THEME_KEY = "mantine-color-scheme";
@@ -54,6 +55,12 @@ export function Layout({ children }: LayoutProps) {
             },
           })}
         />
+        <Head>
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width"
+          />
+        </Head>
         <div>
           <LayoutInner>{children}</LayoutInner>
         </div>

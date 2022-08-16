@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
     "@iconify-icons/logos": "^1.2.15",
     "@iconify/react": "^3.2.2",
     "@mantine/carousel": "^5.0.3",
@@ -19,6 +20,7 @@
     "@mantine/form": "^5.0.3",
     "@mantine/hooks": "^5.0.3",
     "@mantine/modals": "^5.0.3",
+    "@mantine/next": "^5.1.6",
     "@mantine/notifications": "^5.0.3",
     "@mantine/prism": "^5.0.3",
     "@mantine/rte": "^5.0.3",
