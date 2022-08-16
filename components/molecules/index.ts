@@ -17,3 +17,5 @@ export { AboutActions } from "./AboutActions";
 export type { AboutContentProps } from "./AboutContent";
 export type { AboutTitleProps } from "./AboutTitle";
 export type { AboutActionsProps } from "./AboutActions";
+
+export { CarouselSlider } from "./CarouselSlider";

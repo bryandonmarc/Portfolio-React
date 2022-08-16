@@ -5,3 +5,5 @@ export type { HeroProps } from "./Hero";
 
 export { About } from "./About";
 export type { AboutProps } from "./About";
+
+export { Project } from "./Project";
