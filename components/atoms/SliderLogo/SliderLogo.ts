@@ -6,4 +6,5 @@ type SliderLogoStylesNames = Selectors<typeof useStyles>;
 export interface SliderLogoProps
   extends DefaultProps<SliderLogoStylesNames, SliderLogoParams> {
   size?: MantineNumberSize;
+  fill?: string;
 }

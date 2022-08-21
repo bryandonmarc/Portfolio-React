@@ -19,3 +19,4 @@ export type { AboutTitleProps } from "./AboutTitle";
 export type { AboutActionsProps } from "./AboutActions";
 
 export { CarouselSlider } from "./CarouselSlider";
+export type { CarouselSliderProps } from "./CarouselSlider";

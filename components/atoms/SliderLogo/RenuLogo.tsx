@@ -18,7 +18,6 @@ export function RenuLogo({
     <svg
       className={cx(classes.root, className)}
       {...others}
-      fill="#F1EAD5"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 9001 810"
     >

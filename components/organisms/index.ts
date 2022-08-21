@@ -7,3 +7,4 @@ export { About } from "./About";
 export type { AboutProps } from "./About";
 
 export { Project } from "./Project";
+export type { ProjectProps } from "./Project";

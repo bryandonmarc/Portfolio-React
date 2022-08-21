@@ -1,77 +1,54 @@
-import { CarouselSlide } from "@components/atoms";
+import { CarouselSlide, CarouselSlideProps } from "@components/atoms";
 import { Carousel } from "@mantine/carousel";
-import { Container, useMantineTheme } from "@mantine/core";
-import { useViewportSize } from "@mantine/hooks";
+import Autoplay from "embla-carousel-autoplay";
+import { Container } from "@mantine/core";
 import { HEADER_HEIGHT } from "@components/organisms";
+import { useRef } from "react";
+import useStyles from "./CarouselSlider.styles";
+export interface CarouselSliderProps {
+  sliders: CarouselSlideProps[];
+}
 
-export function CarouselSlider() {
-  const { height } = useViewportSize();
-
-  const theme = useMantineTheme();
+export function CarouselSlider({ sliders }: CarouselSliderProps) {
+  const { classes } = useStyles();
+  const autoplay = useRef(Autoplay({ delay: 2500 }));
 
   return (
     <Container
       size={1420}
-      sx={(theme) => ({
-        [theme.fn.smallerThan("sm")]: {
-          padding: 0,
-          marginLeft: theme.spacing.xl * 1.25,
-          marginRight: theme.spacing.xl * 1.25,
-        },
-      })}
+      // sx={(theme) => ({
+      //   position: "relative",
+
+      //   [theme.fn.smallerThan("sm")]: {
+      //     padding: 0,
+      //     marginLeft: theme.spacing.xl * 1.25,
+      //     marginRight: theme.spacing.xl * 1.25,
+      //   },
+      // })}
     >
       <Carousel
-        height={768}
+        classNames={classes}
+        height={(1420 * 628) / 1200}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={(_) => {
+          autoplay.current.reset();
+          autoplay.current.play();
+        }}
         orientation="vertical"
         slideGap="md"
         loop
         withIndicators
         mx="auto"
-        sx={(theme) => ({
-          [theme.fn.smallerThan("sm")]: {
-            height: `calc(100vh - ${HEADER_HEIGHT * 2}px)`,
-          },
-        })}
-        styles={{
-          indicator: {
-            height: 12,
-            width: 4,
-            transition: "height  250ms ease",
-
-            "&[data-active]": {
-              height: 40,
-            },
-          },
-
-          control: {
-            backgroundColor: "transparent",
-            border: "none",
-            color: theme.white,
-
-            [`& svg`]: {
-              width: 24,
-              height: 24,
-            },
-          },
-
-          viewport: {
-            [theme.fn.smallerThan("sm")]: {
-              height: "100%",
-            },
-          },
-
-          container: {
-            [theme.fn.smallerThan("sm")]: {
-              height: "100%",
-            },
-          },
-        }}
+        // sx={(theme) => ({
+        //   [theme.fn.smallerThan("sm")]: {
+        //     height: `calc(100vh - ${HEADER_HEIGHT * 2}px)`,
+        //   },
+        // })}
       >
-        {Array(9)
-          .fill(null)
-          .map((_, i) => (
-            <CarouselSlide key={i} index={i + 1} />
-          ))}
+        {sliders.map((slide) => (
+          <CarouselSlide {...slide} key={slide.alt} />
+        ))}
       </Carousel>
     </Container>
   );

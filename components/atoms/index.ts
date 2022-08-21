@@ -24,4 +24,11 @@ export type { SkillCardProps } from "./SkillCard";
 export type { SkillGridProps } from "./SkillGrid";
 
 export { CarouselSlide } from "./CarouselSlide";
-export { RenuLogo } from "./SliderLogo";
+export {
+  RenuLogo,
+  CandleLogo,
+  CovidTrackerLogo,
+  EduTechLogo,
+} from "./SliderLogo";
+
+export type { CarouselSlideProps } from "./CarouselSlide";

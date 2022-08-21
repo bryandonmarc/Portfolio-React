@@ -1,38 +1,73 @@
 import { Carousel } from "@mantine/carousel";
-import { Button, Paper, Title, Text, Box, Sx } from "@mantine/core";
-import Image from "next/image";
-import { RenuLogo } from "@components/atoms";
-import useStyles from "./CarouselSlide.styles";
+import { Button, Paper, Title, Text, Box } from "@mantine/core";
+import Image from "next/future/image";
+import useStyles, { fadeIn, fadeOut } from "./CarouselSlide.styles";
+import { StaticImageData } from "next/future/image";
+import { useEventListener, useMergedRef } from "@mantine/hooks";
+import { useRef } from "react";
 
-export function CarouselSlide({ index }: { index: number }) {
+export interface CarouselSlideProps {
+  src: string | StaticImageData;
+  gif: string | StaticImageData;
+  alt: string;
+  logo: React.ReactNode;
+}
+
+export function CarouselSlide({ src, alt, logo, gif }: CarouselSlideProps) {
   const { classes } = useStyles();
+
+  // Animated display toggle transition/animation for proper lazy loading
+  // https://stackoverflow.com/a/9334132
+  const ref = useRef();
+  const animationStart = useEventListener("animationstart", (e) => {
+    const target = e.target! as HTMLElement;
+    if (e.animationName === fadeIn.name) {
+      target.classList.add("entered");
+    }
+  });
+  const animationEnd = useEventListener("animationend", (e) => {
+    const target = e.target! as HTMLElement;
+    if (e.animationName === fadeOut.name) {
+      target.classList.remove("entered");
+    }
+  });
+  const mergedRef = useMergedRef(ref, animationStart, animationEnd);
 
   return (
     <Carousel.Slide>
-      <Paper shadow="md" radius="md" className={classes.card}>
+      <Paper shadow="md" radius="md" className={classes.card} ref={mergedRef}>
         <Image
           quality="90"
           priority
           placeholder="blur"
-          src={`https://picsum.photos/seed/${index}/1366/768`}
-          blurDataURL={`https://picsum.photos/seed/${index}/10/10`}
-          layout="fill"
+          src={src}
           className={classes.image}
           sizes="100vw"
-          alt={`Random Picsum ${index}`}
+          alt={alt}
         />
-        <Box className={classes.wrapper}>
-          <Text className={classes.category} size="xs">
-            {"category"}
-          </Text>
-          <Title order={3} className={classes.title}>
-            <span>{"title"}</span>
-            <RenuLogo />
-          </Title>
-        </Box>
-        <Button variant="white" color="dark">
-          Read article
-        </Button>
+        <div className={classes.container}>
+          <Image
+            quality="90"
+            src={gif}
+            className={classes.gif}
+            sizes="100vw"
+            alt={alt}
+          />
+          <Box p="xl" className={classes.wrapper}>
+            <div className={classes.header}>
+              <Title order={3} className={classes.title}>
+                <span>{alt}</span>
+                {logo}
+              </Title>
+              <Text className={classes.category} size="xs">
+                {"category"}
+              </Text>
+            </div>
+            <Button variant="white" color="dark">
+              Read article
+            </Button>
+          </Box>
+        </div>
       </Paper>
     </Carousel.Slide>
   );

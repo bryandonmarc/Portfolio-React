@@ -14,23 +14,29 @@ import {
   IconHexagon,
   IconBrandReactNative,
   IconBrandVue,
-  IconBrandGit,
   IconBrandNextjs,
   IconBrandNuxt,
   IconBrandTailwind,
   IconBrandSass,
   IconBrandFirebase,
-  IconBrandPython,
-  IconBrandPhp,
-  IconDatabase,
-  Icon3dCubeSphere,
-  IconCSharp,
-  IconAppWindow,
   IconPhoneIncoming,
+  IconBrandGit,
+  IconMessages,
 } from "@tabler/icons";
 import { Icon } from "@iconify/react/dist/offline";
 import Shopify from "@iconify-icons/logos/shopify";
 import { HomePageProps, meta } from "@components/templates";
+import projectRenu from "@assets/images/project/project-renu.webp";
+import projectRenuGif from "@assets/images/project/project-renu.gif";
+import projectCandle from "@assets/images/project/project-candle.webp";
+import projectCovidTracker from "@assets/images/project/project-covidtracker.webp";
+import projectEdutech from "@assets/images/project/project-edutech.webp";
+import {
+  CandleLogo,
+  CovidTrackerLogo,
+  EduTechLogo,
+  RenuLogo,
+} from "@components/atoms";
 
 const homePage: HomePageProps = {
   heroProps: {
@@ -160,14 +166,14 @@ const homePage: HomePageProps = {
           percentage: 74,
         },
         {
-          Icon: IconServer,
-          title: "Back-end Development",
+          Icon: IconTool,
+          title: "Software Development",
           color: "indigo",
           percentage: 36,
         },
         {
-          Icon: IconTool,
-          title: "Software Development",
+          Icon: IconMessages,
+          title: "Leadership & Communication",
           color: "cyan",
           percentage: 45,
         },
@@ -208,24 +214,24 @@ const homePage: HomePageProps = {
       ),
 
       skillGrid: {
-        heading: "I'm confident with...",
+        heading: "I'm confident working with...",
         subheading: "+ many more!",
         skills: [
           {
             id: 1,
-            title: "HTML",
+            title: "HTML5",
             Icon: IconBrandHtml5,
             color: "orange",
           },
           {
             id: 2,
-            title: "CSS",
+            title: "CSS3",
             Icon: IconBrandCss3,
-            color: "blue",
+            color: "indigo",
           },
           {
             id: 3,
-            title: "JavaScript",
+            title: "JS ES6 + TypeScript",
             Icon: IconBrandJavascript,
             color: "yellow",
           },
@@ -233,7 +239,7 @@ const homePage: HomePageProps = {
             id: 4,
             title: "React",
             Icon: IconBrandReactNative,
-            color: "cyan",
+            color: "blue",
           },
           {
             id: 5,
@@ -261,9 +267,9 @@ const homePage: HomePageProps = {
           },
           {
             id: 9,
-            title: "MySQL",
-            Icon: IconDatabase,
-            color: "blue",
+            title: "Git",
+            Icon: IconBrandGit,
+            color: "red",
           },
           {
             id: 10,
@@ -281,7 +287,7 @@ const homePage: HomePageProps = {
             id: 12,
             title: "Firebase",
             Icon: IconBrandFirebase,
-            color: "orange",
+            color: "yellow",
           },
           // {
           //   id: 13,
@@ -309,6 +315,34 @@ const homePage: HomePageProps = {
         secondary: "Contact Me",
         IconSecondary: IconPhoneIncoming,
       },
+    },
+  },
+
+  projectProps: {
+    carousel: {
+      sliders: [
+        {
+          src: projectRenu,
+          alt: "RENU Naturals",
+          logo: <RenuLogo fill="#223F35" />,
+          gif: projectRenuGif,
+        },
+        {
+          src: projectCandle,
+          alt: "1220 Candle Company",
+          logo: <CandleLogo fill="#003E4D" />,
+        },
+        {
+          src: projectCovidTracker,
+          alt: "MCL COVID19 Case Tracker for Laguna",
+          logo: <CovidTrackerLogo fill="#00204D" />,
+        },
+        {
+          src: projectEdutech,
+          alt: "eduGames Teach",
+          logo: <EduTechLogo fill="#111827" />,
+        },
+      ],
     },
   },
 };
