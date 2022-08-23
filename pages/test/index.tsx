@@ -197,7 +197,7 @@ const homePage: HomePageProps = {
           </p>
           <p>
             I&apos;m a Computer Science graduate and a <b>Magna Cum Laude</b> 📖{" "}
-            latin honor candidate . I held <b>leadership positions</b> in our
+            latin honor awardee . I held <b>leadership positions</b> in our
             college council and our university&apos;s student chapters of
             national and international organizations involving the field of
             computing and ICT. I am a recipient of the OWWA EDSP scholarship, a
