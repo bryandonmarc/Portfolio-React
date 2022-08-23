@@ -7,6 +7,7 @@ export function GithubControl() {
     <HeaderControl
       tooltip="GitHub Profile"
       component="a"
+      target="_blank"
       href={meta.githubLink}
     >
       <GithubIcon size={22} />

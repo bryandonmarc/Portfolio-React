@@ -8,6 +8,7 @@ export function KofiControl() {
       tooltip="Buy me a coffee!"
       component="a"
       href={meta.kofiLink}
+      target="_blank"
       sx={(theme) => ({
         color: theme.white,
         backgroundColor: meta.kofiColor,

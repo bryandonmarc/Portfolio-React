@@ -7,6 +7,7 @@ export function LinkedInControl() {
     <HeaderControl
       tooltip="LinkedIn Profile"
       component="a"
+      target="_blank"
       href={meta.linkedInLink}
       sx={(theme) => ({
         color: theme.white,
