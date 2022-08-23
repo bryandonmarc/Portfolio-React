@@ -29,8 +29,11 @@ import { HomePageProps, meta } from "@components/templates";
 import projectRenu from "@assets/images/project/project-renu.webp";
 import projectRenuGif from "@assets/images/project/project-renu.gif";
 import projectCandle from "@assets/images/project/project-candle.webp";
+import projectCandleGif from "@assets/images/project/project-candle.gif";
 import projectCovidTracker from "@assets/images/project/project-covidtracker.webp";
+import projectCovidTrackerGif from "@assets/images/project/project-covidtracker.gif";
 import projectEdutech from "@assets/images/project/project-edutech.webp";
+import projectEdutechGif from "@assets/images/project/project-edutech.gif";
 import {
   CandleLogo,
   CovidTrackerLogo,
@@ -311,7 +314,7 @@ const homePage: HomePageProps = {
       },
 
       actions: {
-        primary: "See Projects",
+        primary: "Projects",
         secondary: "Contact Me",
         IconSecondary: IconPhoneIncoming,
       },
@@ -326,21 +329,32 @@ const homePage: HomePageProps = {
           alt: "RENU Naturals",
           logo: <RenuLogo fill="#223F35" />,
           gif: projectRenuGif,
+          color: "#223F35",
+          href: "https://renunaturals.com/",
         },
         {
           src: projectCandle,
           alt: "1220 Candle Company",
           logo: <CandleLogo fill="#003E4D" />,
+          gif: projectCandleGif,
+          color: "#003E4D",
+          href: "https://1220candlecompany.com/",
         },
         {
           src: projectCovidTracker,
           alt: "MCL COVID19 Case Tracker for Laguna",
           logo: <CovidTrackerLogo fill="#00204D" />,
+          gif: projectCovidTrackerGif,
+          color: "#00204D",
+          href: "https://mcl-covid19tracker-laguna.netlify.app/",
         },
         {
           src: projectEdutech,
           alt: "eduGames Teach",
-          logo: <EduTechLogo fill="#111827" />,
+          logo: <EduTechLogo fill="#301C80" />,
+          gif: projectEdutechGif,
+          color: "#301C80",
+          href: "https://edu-tech-ssr.herokuapp.com/",
         },
       ],
     },

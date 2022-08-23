@@ -1,5 +1,6 @@
 import { CarouselSlider, CarouselSliderProps } from "@components/molecules";
-import { Box } from "@mantine/core";
+import { ProjectTitle } from "@components/molecules/ProjectTitle/ProjectTitle";
+import { Box, Container } from "@mantine/core";
 
 export interface ProjectProps {
   carousel: CarouselSliderProps;
@@ -14,7 +15,10 @@ export function Project({ carousel }: ProjectProps) {
         marginBottom: theme.spacing.xl * 9,
       })}
     >
-      <CarouselSlider {...carousel}></CarouselSlider>
+      <Container size={1420}>
+        <ProjectTitle />
+        <CarouselSlider {...carousel}></CarouselSlider>
+      </Container>
     </Box>
   );
 }

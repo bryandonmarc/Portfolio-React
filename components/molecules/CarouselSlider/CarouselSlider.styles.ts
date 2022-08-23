@@ -2,17 +2,18 @@ import { createStyles } from "@mantine/core";
 
 export default createStyles((theme, _params, getRef) => ({
   indicator: {
-    height: 12,
-    width: 4,
+    height: 14,
+    width: 5,
     transition: "height  250ms ease",
+    backgroundColor: theme.black,
 
     "&[data-active]": {
-      height: 40,
+      height: 44,
     },
   },
 
   control: {
-    backgroundColor: "transparent",
+    backgroundColor: theme.fn.rgba(theme.black, 0.75),
     border: "none",
     color: theme.white,
 

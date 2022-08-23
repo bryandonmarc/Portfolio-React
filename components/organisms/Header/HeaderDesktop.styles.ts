@@ -10,10 +10,13 @@ export default createStyles((theme) => ({
     zIndex: 6,
     position: "fixed",
     backgroundColor:
-      theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
+      theme.colorScheme === "dark"
+        ? theme.fn.rgba(theme.colors.dark[7], 0.5)
+        : theme.fn.rgba(theme.white, 0.5),
     borderBottom: `1px solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[2]
     }`,
+    backdropFilter: `blur(100px)`,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
