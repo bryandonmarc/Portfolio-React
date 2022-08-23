@@ -1,45 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { HeaderDesktop } from "./HeaderDesktop";
 import { HeaderMobile } from "./HeaderMobile";
+import { useWindowEvent } from "@mantine/hooks";
 
 export interface ScrollProp {
   scrollDir: string;
 }
 
 export function Header() {
-  const [scrollDir, setScrollDir] = useState("down");
-  useEffect(() => {
-    const threshold = 0;
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
+  const scrollDir = useRef("down");
+  const threshold = 0;
+  let lastScrollY = window.pageYOffset;
+  let ticking = false;
 
-    const updateScrollDir = () => {
-      const scrollY = window.pageYOffset;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.pageYOffset;
 
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
+        if (Math.abs(scrollY - lastScrollY) < threshold) {
+          ticking = false;
+          return;
+        }
+        scrollDir.current = scrollY > lastScrollY ? "down" : "up";
+        lastScrollY = scrollY > 0 ? scrollY : 0;
         ticking = false;
-        return;
-      }
-      setScrollDir(scrollY > lastScrollY ? "down" : "up");
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
-    };
+      });
+      ticking = true;
+    }
+  };
 
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollDir]);
+  useWindowEvent("scroll", onScroll);
 
   return (
     <>
-      <HeaderDesktop scrollDir={scrollDir} />
-      <HeaderMobile scrollDir={scrollDir} />
+      <HeaderDesktop scrollDir={scrollDir.current} />
+      <HeaderMobile scrollDir={scrollDir.current} />
     </>
   );
 }
