@@ -32,7 +32,7 @@ export function AboutActions({
       </Button>
 
       <Button
-        variant={theme.colorScheme === "dark" ? "light" : "outline"}
+        variant={theme.colorScheme === "dark" ? "subtle" : "outline"}
         size="md"
         radius="md"
         leftIcon={IconSecondary && <IconSecondary size={20} />}
