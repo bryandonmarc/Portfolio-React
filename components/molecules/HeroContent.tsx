@@ -1,8 +1,9 @@
-import { List, Text } from "@mantine/core";
+import { List, Text, ThemeIcon } from "@mantine/core";
+import { TablerIcon } from "@tabler/icons";
 
 export interface HeroContentProps {
   contents: {
-    icon: React.ReactNode;
+    Icon: TablerIcon;
     heading: string;
     description: React.ReactNode;
   }[];
@@ -12,7 +13,19 @@ export function HeroContent({ contents }: HeroContentProps) {
   return (
     <List mt={30} spacing="xs" size="md" center={true}>
       {contents.map((listItem, index) => (
-        <List.Item key={index} icon={listItem.icon}>
+        <List.Item
+          key={index}
+          icon={
+            <ThemeIcon
+              size="xl"
+              radius="xl"
+              variant="outline"
+              sx={{ border: "none" }}
+            >
+              <listItem.Icon size={40} stroke={1.5} />
+            </ThemeIcon>
+          }
+        >
           <Text
             component="span"
             sx={{
