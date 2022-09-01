@@ -10,7 +10,7 @@ export interface ScrollProp {
 export function Header() {
   const scrollDir = useRef("down");
   const threshold = 0;
-  let lastScrollY = window.pageYOffset;
+  let lastScrollY = 0;
   let ticking = false;
 
   const onScroll = () => {
