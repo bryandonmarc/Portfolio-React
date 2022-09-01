@@ -8,12 +8,13 @@ import { useRef } from "react";
 import { IconExternalLink } from "@tabler/icons";
 import { Languages } from "@components/templates";
 import { LanguageControl } from "../LanguageControl";
+import { SliderLogo } from "@components/atoms/SliderLogo";
 
 export interface CarouselSlideProps {
   src: string | StaticImageData;
   gif: string | StaticImageData;
   alt: string;
-  logo: React.ReactNode;
+  Logo: SliderLogo;
   color: string;
   href: string;
   langs: Languages[];
@@ -22,7 +23,7 @@ export interface CarouselSlideProps {
 export function CarouselSlide({
   src,
   alt,
-  logo,
+  Logo,
   gif,
   color,
   href,
@@ -71,7 +72,7 @@ export function CarouselSlide({
             <div className={classes.header}>
               <Title order={3} className={classes.title}>
                 <span>{alt}</span>
-                {logo}
+                <Logo fill={color} />
               </Title>
               <Text className={classes.category} size="xs">
                 {langs.map((lang) => (

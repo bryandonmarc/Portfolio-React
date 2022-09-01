@@ -30,7 +30,7 @@ export {
   CovidTrackerLogo,
   EduTechLogo,
 } from "./SliderLogo";
-
+export type { SliderLogo } from "./SliderLogo";
 export type { CarouselSlideProps } from "./CarouselSlide";
 
 export { LanguageControl } from "./LanguageControl";
