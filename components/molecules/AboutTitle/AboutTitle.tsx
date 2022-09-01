@@ -27,7 +27,7 @@ export function AboutTitle({ title, description }: AboutTitleProps) {
           <Text
             size="sm"
             color="dimmed"
-            px="xs"
+            px="xl"
             className={classes.description}
           >
             {description}
