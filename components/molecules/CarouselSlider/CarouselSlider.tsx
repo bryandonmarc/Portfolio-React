@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Container } from "@mantine/core";
 import { useRef } from "react";
 import useStyles from "./CarouselSlider.styles";
+import { useViewportSize } from "@mantine/hooks";
 export interface CarouselSliderProps {
   sliders: CarouselSlideProps[];
 }
@@ -25,15 +26,19 @@ export function CarouselSlider({ sliders }: CarouselSliderProps) {
 
     <Carousel
       classNames={classes}
-      height={(1420 * 628) / 1200}
+      height="100%"
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
       onMouseLeave={(_) => {
         autoplay.current.reset();
         autoplay.current.play();
       }}
-      orientation="vertical"
+      // orientation="vertical"
       slideGap="md"
+      // breakpoints={[
+      //   { maxWidth: "md", slideSize: "50%" },
+      //   { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
+      // ]}
       loop
       withIndicators
       mx="auto"

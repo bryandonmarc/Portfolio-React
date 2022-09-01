@@ -15,11 +15,6 @@ export default createStyles((theme, _, getRef) => ({
     position: "relative",
     height: "100%",
 
-    [theme.fn.smallerThan("sm")]: {
-      paddingTop: theme.spacing.xl * 2,
-      paddingBottom: theme.spacing.xl * 2,
-    },
-
     [`&:hover .${getRef("container")}`]: {
       opacity: 1,
     },
@@ -65,6 +60,10 @@ export default createStyles((theme, _, getRef) => ({
     flexDirection: "column",
     // justifyContent: "space-between",
     alignItems: "flex-start",
+
+    [theme.fn.smallerThan("lg")]: {
+      padding: theme.spacing.sm,
+    },
   },
 
   gif: {
@@ -90,8 +89,8 @@ export default createStyles((theme, _, getRef) => ({
 
   image: {
     ref: getRef("image"),
-    width: "auto",
-    height: "100%",
+    width: "100%",
+    height: "auto",
     objectFit: "cover",
 
     transitionDuration: "150ms",

@@ -6,6 +6,8 @@ import { StaticImageData } from "next/future/image";
 import { useEventListener, useMergedRef } from "@mantine/hooks";
 import { useRef } from "react";
 import { IconExternalLink } from "@tabler/icons";
+import { Languages } from "@components/templates";
+import { LanguageControl } from "../LanguageControl";
 
 export interface CarouselSlideProps {
   src: string | StaticImageData;
@@ -14,6 +16,7 @@ export interface CarouselSlideProps {
   logo: React.ReactNode;
   color: string;
   href: string;
+  langs: Languages[];
 }
 
 export function CarouselSlide({
@@ -23,6 +26,7 @@ export function CarouselSlide({
   gif,
   color,
   href,
+  langs,
 }: CarouselSlideProps) {
   const { classes } = useStyles();
 
@@ -70,7 +74,9 @@ export function CarouselSlide({
                 {logo}
               </Title>
               <Text className={classes.category} size="xs">
-                {"category"}
+                {langs.map((lang) => (
+                  <LanguageControl lang={lang} key={lang} />
+                ))}
               </Text>
             </div>
             <Button

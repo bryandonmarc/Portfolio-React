@@ -2,13 +2,13 @@ import { createStyles } from "@mantine/core";
 
 export default createStyles((theme, _params, getRef) => ({
   indicator: {
-    height: 14,
-    width: 5,
-    transition: "height  250ms ease",
+    width: 14,
+    height: 5,
+    transition: "width 250ms ease",
     backgroundColor: theme.black,
 
     "&[data-active]": {
-      height: 44,
+      width: 44,
     },
   },
 

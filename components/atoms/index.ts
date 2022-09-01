@@ -32,3 +32,5 @@ export {
 } from "./SliderLogo";
 
 export type { CarouselSlideProps } from "./CarouselSlide";
+
+export { LanguageControl } from "./LanguageControl";
