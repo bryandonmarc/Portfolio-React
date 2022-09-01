@@ -80,6 +80,7 @@ export function CarouselSlide({
               </Text>
             </div>
             <Button
+              tabIndex={-1}
               component="a"
               target="_blank"
               href={href}
