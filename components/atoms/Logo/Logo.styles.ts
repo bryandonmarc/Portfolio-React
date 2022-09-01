@@ -6,7 +6,24 @@ export default createStyles((theme) => ({
     ...theme.fn.focusStyles(),
     textDecoration: "none",
     userSelect: "none",
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    display: "flex",
+    alignItems: "center",
+    marginLeft: theme.spacing.md,
+    marginRight: theme.spacing.md,
+    border: `1px solid transparent`,
+    borderRadius: theme.radius.md,
+
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[1]
+        : theme.colors.gray[8],
+
+    ...theme.fn.hover({
+      color:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[0]
+          : theme.colors.gray[9],
+    }),
   },
 
   logoContainer: {

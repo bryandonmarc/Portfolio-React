@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "./Logo.styles";
-import Link from "next/link";
+import { NextLink } from "@mantine/next";
 import { Icon3dCubeSphere as IconHome } from "@tabler/icons";
 import { Anchor } from "@mantine/core";
 
@@ -10,26 +10,14 @@ export function Logo() {
   return (
     <div className={classes.logoWrapper}>
       <div className={classes.logoContainer}>
-        <Link href="/" className={classes.logo} aria-label="Home">
-          <Anchor
-            sx={(theme) => ({
-              color:
-                theme.colorScheme === "dark"
-                  ? theme.colors.dark[1]
-                  : theme.colors.gray[8],
-
-              ...theme.fn.hover({
-                color:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[0]
-                    : theme.colors.gray[9],
-              }),
-            })}
-            className={classes.logoContainer}
-          >
-            <IconHome size={32} />
-          </Anchor>
-        </Link>
+        <Anchor
+          component={NextLink}
+          href="/"
+          className={classes.logo}
+          aria-label="Home"
+        >
+          <IconHome size={32} />
+        </Anchor>
       </div>
     </div>
   );
