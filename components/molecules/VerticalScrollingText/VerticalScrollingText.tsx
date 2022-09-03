@@ -21,7 +21,7 @@ export function VerticalScrollingText({ textArray }: TextProps) {
               >
                 &lt;
               </Text>
-              <Text component="span">{listItem.replaceAll(" ", "")}</Text>
+              <Text component="span">{listItem.replace(/ /g, "")}</Text>
               <Text
                 component="span"
                 sx={(theme) => ({ color: theme.primaryColor })}
@@ -37,7 +37,7 @@ export function VerticalScrollingText({ textArray }: TextProps) {
             >
               &lt;
             </Text>
-            <Text component="span">{textArray[0].replaceAll(" ", "")}</Text>
+            <Text component="span">{textArray[0].replace(/ /g, "")}</Text>
             <Text
               component="span"
               sx={(theme) => ({ color: theme.primaryColor })}

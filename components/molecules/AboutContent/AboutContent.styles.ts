@@ -10,22 +10,22 @@ export default createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    gap: theme.spacing.lg,
     flexDirection: "row",
 
     [theme.fn.smallerThan("md")]: {
       flexDirection: "column-reverse",
-      gap: theme.spacing.xl * 1.5,
     },
   },
 
   content: {
     maxWidth: 640,
     width: "100%",
+    marginLeft: theme.spacing.lg,
 
     [theme.fn.smallerThan("md")]: {
       maxWidth: "100%",
       marginRight: 0,
+      marginBottom: theme.spacing.xl * 1.5,
     },
   },
 }));

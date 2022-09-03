@@ -19,7 +19,7 @@ export function AboutActions({
   const theme = useMantineTheme();
 
   return (
-    <Group>
+    <Group className={classes.wrapper}>
       <Button
         variant="gradient"
         gradient={{ from: "grape", to: "indigo" }}

@@ -12,7 +12,7 @@ export function HeroActions({ primary, secondary }: HeroActionsProps) {
   const theme = useMantineTheme();
 
   return (
-    <Group mt={30}>
+    <Group mt={30} className={classes.wrapper}>
       <Button
         variant="gradient"
         gradient={{ from: "grape", to: "indigo" }}

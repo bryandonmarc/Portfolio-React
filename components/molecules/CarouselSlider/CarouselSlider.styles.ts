@@ -1,6 +1,14 @@
 import { createStyles } from "@mantine/core";
 
 export default createStyles((theme, _params, getRef) => ({
+  indicators: {
+    gap: 0,
+
+    [`& > * + *`]: {
+      marginLeft: theme.spacing.md / 2,
+    },
+  },
+
   indicator: {
     width: 14,
     height: 5,

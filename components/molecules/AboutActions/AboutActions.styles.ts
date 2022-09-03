@@ -6,4 +6,12 @@ export default createStyles((theme) => ({
       flex: 1,
     },
   },
+
+  wrapper: {
+    gap: 0,
+
+    [`& > * + *`]: {
+      marginLeft: theme.spacing.md,
+    },
+  },
 }));
