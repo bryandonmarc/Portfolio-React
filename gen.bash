@@ -12,9 +12,9 @@ createStyles() {
     cat << EOF >> $1
 import { createStyles } from "@mantine/core";
 
-export default createStyles((theme) => {
+export default createStyles((theme) => ({
 
-})
+}))
 EOF
 }
 createJSXwithStyles() {
