@@ -23,7 +23,7 @@ export type { StatsGridProps } from "./StatsGrid";
 export type { SkillCardProps } from "./SkillCard";
 export type { SkillGridProps } from "./SkillGrid";
 
-export { CarouselSlide } from "./CarouselSlide";
+export { CarouselSlide, fadeIn, fadeOut } from "./CarouselSlide";
 export {
   RenuLogo,
   CandleLogo,

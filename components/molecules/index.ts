@@ -20,3 +20,9 @@ export type { AboutActionsProps } from "./AboutActions";
 
 export { CarouselSlider } from "./CarouselSlider";
 export type { CarouselSliderProps } from "./CarouselSlider";
+
+export { ProjectCard } from "./ProjectCard";
+ export type { ProjectCardProps } from "./ProjectCard";
+
+export { VerticalSlider } from "./VerticalSlider";
+ export type { VerticalSliderProps } from "./VerticalSlider";

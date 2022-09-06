@@ -1,6 +1,5 @@
 import { createStyles } from "@mantine/core";
 import { HEADER_HEIGHT } from "@components/organisms";
-import { relative } from "path";
 
 export default createStyles((theme) => ({
   cover: {

@@ -38,6 +38,10 @@ export default createStyles((theme, _params, getRef) => ({
   },
 
   root: {
+    [theme.fn.smallerThan(1280)]: {
+      display: "none",
+    },
+
     "&:hover": {
       [`& .${getRef("controls")}`]: {
         opacity: 1,

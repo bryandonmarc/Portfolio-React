@@ -8,3 +8,6 @@ export type { AboutProps } from "./About";
 
 export { Project } from "./Project";
 export type { ProjectProps } from "./Project";
+
+export { Projects } from "./Projects";
+ export type { ProjectsProps } from "./Projects";

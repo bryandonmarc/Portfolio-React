@@ -1,10 +1,8 @@
 import { CarouselSlide, CarouselSlideProps } from "@components/atoms";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Container } from "@mantine/core";
 import { useRef } from "react";
 import useStyles from "./CarouselSlider.styles";
-import { useViewportSize } from "@mantine/hooks";
 export interface CarouselSliderProps {
   sliders: CarouselSlideProps[];
 }

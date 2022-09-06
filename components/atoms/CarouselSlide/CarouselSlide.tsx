@@ -1,23 +1,16 @@
 import { Carousel } from "@mantine/carousel";
-import { Button, Paper, Title, Text, Box, MantineColor } from "@mantine/core";
+import { Button, Paper, Title, Text, Box } from "@mantine/core";
 import Image from "next/future/image";
 import useStyles, { fadeIn, fadeOut } from "./CarouselSlide.styles";
-import { StaticImageData } from "next/future/image";
 import { useEventListener, useMergedRef } from "@mantine/hooks";
 import { useRef } from "react";
 import { IconExternalLink } from "@tabler/icons";
-import { Languages } from "@components/templates";
 import { LanguageControl } from "../LanguageControl";
-import { SliderLogo } from "@components/atoms/SliderLogo";
-
-export interface CarouselSlideProps {
-  src: string | StaticImageData;
-  gif: string | StaticImageData;
-  alt: string;
-  Logo: SliderLogo;
+import { ProjectCardProps } from "@components/molecules";
+import { SliderLogo } from "@components/atoms";
+export interface CarouselSlideProps extends ProjectCardProps {
   color: string;
-  href: string;
-  langs: Languages[];
+  Logo: SliderLogo;
 }
 
 export function CarouselSlide({
@@ -28,6 +21,7 @@ export function CarouselSlide({
   color,
   href,
   langs,
+  description,
 }: CarouselSlideProps) {
   const { classes } = useStyles();
 
@@ -80,6 +74,10 @@ export function CarouselSlide({
                 ))}
               </Text>
             </div>
+            <Text size="sm" mt="xs">
+              {description}
+            </Text>
+
             <Button
               tabIndex={-1}
               component="a"
