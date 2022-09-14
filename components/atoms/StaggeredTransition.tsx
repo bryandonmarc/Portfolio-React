@@ -9,7 +9,7 @@ interface TransitionProps {
 
 export function StaggeredTransition({
   children,
-  step = 0.2,
+  step = 0.25,
   delay,
 }: TransitionProps) {
   return (
@@ -18,13 +18,14 @@ export function StaggeredTransition({
         <motion.div
           key={i}
           initial={{ opacity: 0, translateY: -50 }}
-          animate={{ opacity: 1, translateY: 0 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
           transition={{
             delay: ((delay ? delay[i] : 0) * step + i * step) / 2,
             type: "spring",
             damping: 15,
             stiffness: 100,
           }}
+          viewport={{ once: true }}
         >
           {child}
         </motion.div>

@@ -15,7 +15,15 @@ interface HeaderControlsProps extends DefaultProps {
 export function HeaderControls({ onSearch, ...others }: HeaderControlsProps) {
   return (
     <Tooltip.Group openDelay={600} closeDelay={100}>
-      <Group spacing="xs" {...others}>
+      <Group
+        sx={(theme) => ({
+          [`& > * + *`]: {
+            marginLeft: theme.spacing.xs,
+          },
+        })}
+        // spacing="xs"
+        {...others}
+      >
         <SearchControl onClick={onSearch} />
         <KofiControl />
         <LinkedInControl />

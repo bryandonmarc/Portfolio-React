@@ -10,41 +10,48 @@ import {
 } from "@mantine/core";
 import { ColorSchemeControl } from "@components/atoms";
 // import { Logo } from '../../Logo/Logo';
-import { HEADER_HEIGHT } from "./Header.styles";
 import useStyles from "./HeaderMobile.styles";
 import { ScrollProp } from "./Header";
 import { useWindowScroll } from "@mantine/hooks";
 import { Logo, SearchControlMobile } from "@components/atoms";
 import { useSpotlight } from "@mantine/spotlight";
+import { motion } from "framer-motion";
+
+const variants = {
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: "-100%" },
+};
 
 export function HeaderMobile({ scrollDir }: ScrollProp) {
   const { classes } = useStyles();
   const spotlight = useSpotlight();
-  const [scroll] = useWindowScroll();
 
   return (
     <Affix position={{ top: 0, left: 0 }}>
-      <Transition
-        transition="slide-down"
-        mounted={scroll.y === 0 || scrollDir === "up"}
+      <motion.nav
+        animate={scrollDir === "up" ? "open" : "closed"}
+        variants={variants}
+        className={classes.header}
       >
-        {(transitionStyles) => (
-          <Header
-            height={HEADER_HEIGHT}
-            className={classes.header}
-            style={transitionStyles}
-          >
-            <Group className={classes.inner}>
-              <Logo />
+        <Group className={classes.inner}>
+          <Logo />
 
-              <Group spacing="xs">
-                <SearchControlMobile onClick={spotlight.openSpotlight} />
-                <ColorSchemeControl />
-              </Group>
-            </Group>
-          </Header>
-        )}
-      </Transition>
+          <Group
+            sx={(theme) => ({
+              [`& > * + *`]: {
+                marginLeft: theme.spacing.xs,
+              },
+            })}
+            // spacing="xs"
+          >
+            <SearchControlMobile onClick={spotlight.openSpotlight} />
+            <ColorSchemeControl />
+          </Group>
+        </Group>
+      </motion.nav>
+      {/* <Transition transition="slide-down" mounted={}>
+        {(transitionStyles) => <Header style={transitionStyles}></Header>}
+      </Transition> */}
     </Affix>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { HeaderDesktop } from "./HeaderDesktop";
 import { HeaderMobile } from "./HeaderMobile";
 import { useWindowEvent } from "@mantine/hooks";
@@ -8,12 +8,12 @@ export interface ScrollProp {
 }
 
 export function Header() {
-  const scrollDir = useRef("down");
+  const scrollDir = useRef("up");
   const threshold = 0;
   let lastScrollY = 0;
   let ticking = false;
 
-  const onScroll = () => {
+  const onScroll = useCallback(() => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         const scrollY = window.pageYOffset;
@@ -28,7 +28,7 @@ export function Header() {
       });
       ticking = true;
     }
-  };
+  }, [lastScrollY, ticking, scrollDir]);
 
   useWindowEvent("scroll", onScroll);
 
