@@ -19,7 +19,7 @@ specifiers:
   '@mantine/rte': ^5.2.0
   '@mantine/spotlight': ^5.2.0
   '@mantine/utils': ^5.2.0
-  '@tabler/icons': ^1.84.0
+  '@tabler/icons': ^1.96.0
   '@types/node': 18.6.4
   '@types/react': 18.0.16
   '@types/react-dom': 18.0.6
@@ -46,7 +46,7 @@ dependencies:
   '@mantine/carousel': 5.2.0_js44tdbf2l7lza5nlvqhclge5m
   '@mantine/core': 5.2.0_fwouwvdrhhimcyptfqpmckngcu
   '@mantine/dates': 5.2.0_626wlb4h7lvtiot333bwwd4q7m
-  '@mantine/ds': 5.2.0_jse5i3qqb7dpis7w7xyq55zn2m
+  '@mantine/ds': 5.2.0_yrb5r544ohvve26omjv2quvnj4
   '@mantine/form': 5.2.0_react@18.2.0
   '@mantine/hooks': 5.2.0_react@18.2.0
   '@mantine/modals': 5.2.0_ezbgt6i2ygqfucqyyjrcxmsr4m
@@ -56,7 +56,7 @@ dependencies:
   '@mantine/rte': 5.2.0_ezbgt6i2ygqfucqyyjrcxmsr4m
   '@mantine/spotlight': 5.2.0_ezbgt6i2ygqfucqyyjrcxmsr4m
   '@mantine/utils': 5.2.0_react@18.2.0
-  '@tabler/icons': 1.84.0_biqbaboplfbrettd7655fr4n2y
+  '@tabler/icons': 1.96.0_biqbaboplfbrettd7655fr4n2y
   dayjs: 1.11.4
   embla-carousel-autoplay: 7.0.1
   embla-carousel-react: 7.0.0_react@18.2.0
@@ -410,7 +410,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@mantine/ds/5.2.0_jse5i3qqb7dpis7w7xyq55zn2m:
+  /@mantine/ds/5.2.0_yrb5r544ohvve26omjv2quvnj4:
     resolution: {integrity: sha512-I97ciS6WdH46pEhRl2qU8PCXgn51sX6zyKR1bpXOvPlT6P0oqIYdTE+TrH20WxKnPmFaFdJMz2f9XDV00bnrfQ==}
     peerDependencies:
       '@mantine/core': 5.2.0
@@ -422,7 +422,7 @@ packages:
       '@mantine/core': 5.2.0_fwouwvdrhhimcyptfqpmckngcu
       '@mantine/hooks': 5.2.0_react@18.2.0
       '@mantine/utils': 5.2.0_react@18.2.0
-      '@tabler/icons': 1.84.0_biqbaboplfbrettd7655fr4n2y
+      '@tabler/icons': 1.96.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -519,7 +519,7 @@ packages:
     dependencies:
       '@mantine/core': 5.2.0_fwouwvdrhhimcyptfqpmckngcu
       '@mantine/hooks': 5.2.0_react@18.2.0
-      '@tabler/icons': 1.84.0_biqbaboplfbrettd7655fr4n2y
+      '@tabler/icons': 1.96.0_biqbaboplfbrettd7655fr4n2y
       quill-mention: 3.1.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -896,8 +896,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@tabler/icons/1.84.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-j1ykzKg9XPkuiK3xN8cNVZA+3+ij4gmdRlnxW8dR1QiBDEWHIU0KXIF8Wt1KDC6nR/LmjL+OMJkUdmRj/k2YtQ==}
+  /@tabler/icons/1.96.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-ZAQ64CHi5sOFQE7COoBmZbhIBtTX+4XNuiVZsr8kcqJX1bmrw6dFU0W9ONJamt/2TO997uVfSqxr2o0WZqZr/g==}
     peerDependencies:
       react: ^16.x || 17.x || 18.x
       react-dom: ^16.x || 17.x || 18.x

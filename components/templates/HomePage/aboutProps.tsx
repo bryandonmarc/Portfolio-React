@@ -2,7 +2,9 @@ import { AboutProps } from "@components/organisms";
 import { Text } from "@mantine/core";
 import {
   IconBrandCss3,
+  IconBrandFirebase,
   IconBrandGit,
+  IconBrandGraphql,
   IconBrandHtml5,
   IconBrandJavascript,
   IconBrandNextjs,
@@ -12,6 +14,7 @@ import {
   IconBrandTailwind,
   IconBrandVue,
   IconBrush,
+  IconDatabase,
   IconMessages,
   IconPhoneIncoming,
   IconTool,
@@ -19,6 +22,7 @@ import {
 } from "@tabler/icons";
 import NodeJS from "@iconify-icons/mdi/nodejs";
 import TypeScript from "@iconify-icons/mdi/language-typescript";
+import MySQL from "@iconify-icons/logos/mysql-icon";
 import { meta } from "@components/templates";
 
 export const aboutProps: AboutProps = {
@@ -72,76 +76,80 @@ export const aboutProps: AboutProps = {
       subheading: "+ many more!",
       skills: [
         {
-          id: 1,
-          title: "HTML5",
+          id: "HTML5",
           Icon: IconBrandHtml5,
           color: "orange",
         },
         {
-          id: 2,
-          title: "CSS3",
+          id: "CSS3",
           Icon: IconBrandCss3,
           color: "indigo",
         },
         {
-          id: 3,
-          title: "JavaScript (ES6+)",
+          id: "JavaScript (ES6+)",
           Icon: IconBrandJavascript,
           color: "yellow",
         },
         {
-          id: 4,
-          title: "React",
+          id: "React",
           Icon: IconBrandReactNative,
           color: "blue",
         },
         {
-          id: 5,
-          title: "Vue",
+          id: "Vue",
           Icon: IconBrandVue,
           color: "green",
         },
         {
-          id: 6,
-          title: "TypeScript",
+          id: "TypeScript",
           icon: TypeScript,
           color: "blue",
         },
         {
-          id: 7,
-          title: "Next.js",
+          id: "Next.js",
           Icon: IconBrandNextjs,
           color: "gray",
         },
         {
-          id: 8,
-          title: "Nuxt.js",
+          id: "Nuxt.js",
           Icon: IconBrandNuxt,
           color: "teal",
         },
         {
-          id: 9,
-          title: "Node.js",
+          id: "Node.js",
           icon: NodeJS,
           color: "lime",
         },
         {
-          id: 10,
-          title: "TailwindCSS",
+          id: "TailwindCSS",
           Icon: IconBrandTailwind,
           color: "cyan",
         },
         {
-          id: 11,
-          title: "Sass",
+          id: "Sass",
           Icon: IconBrandSass,
           color: "pink",
         },
         {
-          id: 12,
-          title: "Git",
+          id: "Git",
           Icon: IconBrandGit,
           color: "red",
+        },
+        {
+          id: "Firebase",
+          Icon: IconBrandFirebase,
+          color: "yellow",
+        },
+        {
+          id: "GraphQL",
+          Icon: IconBrandGraphql,
+          color: "pink",
+        },
+        {
+          id: "MySQL",
+          icon: MySQL,
+          color: "cyan",
+          fill: true,
         },
         // {
         //   id: 13,

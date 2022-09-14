@@ -31,15 +31,25 @@ export default createStyles(
         backgroundColor: theme.colors[color][6],
         color: theme.white,
 
-        [`& .${getRef("icon")}`]: {
+        [`& .${getRef("icon")} > *`]: {
           color: theme.white,
+        },
+        [`& .${getRef("icon")}.${getRef("fill")} > *`]: {
+          fill: "currentcolor",
         },
       },
     },
 
     icon: {
       ref: getRef("icon"),
-      color: theme.colors[color][6],
+
+      [`& > *`]: {
+        color: theme.colors[color][6],
+      },
+    },
+
+    fill: {
+      ref: getRef("fill"),
     },
   })
 );
