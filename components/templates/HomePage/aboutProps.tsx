@@ -9,6 +9,8 @@ import {
   IconBrandJavascript,
   IconBrandNextjs,
   IconBrandNuxt,
+  IconBrandPhp,
+  IconBrandPython,
   IconBrandReactNative,
   IconBrandSass,
   IconBrandTailwind,
@@ -23,6 +25,7 @@ import {
 import NodeJS from "@iconify-icons/mdi/nodejs";
 import TypeScript from "@iconify-icons/mdi/language-typescript";
 import MySQL from "@iconify-icons/logos/mysql-icon";
+import AspNET from "@iconify-icons/mdi/dot-net";
 import { meta } from "@components/templates";
 
 export const aboutProps: AboutProps = {
@@ -151,24 +154,21 @@ export const aboutProps: AboutProps = {
           color: "cyan",
           fill: true,
         },
-        // {
-        //   id: 13,
-        //   title: "Python",
-        //   Icon: IconBrandPython,
-        //   color: "yellow",
-        // },
-        // {
-        //   id: 14,
-        //   title: "PHP",
-        //   Icon: IconBrandPhp,
-        //   color: "indigo",
-        // },
-        // {
-        //   id: 15,
-        //   title: "C-Sharp",
-        //   Icon: IconCSharp,
-        //   color: "violet",
-        // },
+        {
+          id: "Python",
+          Icon: IconBrandPython,
+          color: "yellow",
+        },
+        {
+          id: "PHP",
+          Icon: IconBrandPhp,
+          color: "indigo",
+        },
+        {
+          id: "ASP.NET",
+          icon: AspNET,
+          color: "violet",
+        },
       ],
     },
 
