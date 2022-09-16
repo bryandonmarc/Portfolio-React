@@ -22,16 +22,24 @@ export function LanguageControl({
       pb={0}
       pl={2}
       pr={8}
-      mr="xs"
-      className={classes.badge}
       styles={{ inner: { textTransform: "none" } }}
+      classNames={classes}
       leftSection={
         <ThemeIcon
           size="lg"
           radius="xl"
           ml={4}
           variant="outline"
-          className={classes.icon}
+          sx={(theme) => ({
+            border: "none",
+            background: "none",
+
+            [`& svg`]: {
+              height: "1.2em",
+              width: "auto",
+              color: theme.black,
+            },
+          })}
         >
           <Icon style={{ fontSize: "inherit" }} icon={languages[lang].icon} />
         </ThemeIcon>
