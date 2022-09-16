@@ -21,6 +21,9 @@ export default createStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
     paddingRight: "var(--removed-scroll-width, 0px)",
+    transitionDuration: "250ms",
+    transitionProperty: "opacity, transform",
+    transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)",
 
     [theme.fn.smallerThan(NAVBAR_BREAKPOINT)]: {
       display: "none",
@@ -42,4 +45,7 @@ export default createStyles((theme) => ({
       display: "none",
     },
   },
+
+  open: { opacity: 1, transform: `translate3d(0, 0, 0)` },
+  closed: { opacity: 0, transform: `translate3d(0, -100%, 0)` },
 }));

@@ -10,25 +10,25 @@ export interface ScrollProp {
 export function Header() {
   const scrollDir = useRef("up");
   const threshold = 0;
-  let lastScrollY = 0;
-  let ticking = false;
+  let lastScrollY = useRef(0);
+  let ticking = useRef(false);
 
   const onScroll = useCallback(() => {
-    if (!ticking) {
+    if (!ticking.current) {
       window.requestAnimationFrame(() => {
         const scrollY = window.pageYOffset;
 
-        if (Math.abs(scrollY - lastScrollY) < threshold) {
-          ticking = false;
+        if (Math.abs(scrollY - lastScrollY.current) < threshold) {
+          ticking.current = false;
           return;
         }
-        scrollDir.current = scrollY > lastScrollY ? "down" : "up";
-        lastScrollY = scrollY > 0 ? scrollY : 0;
-        ticking = false;
+        scrollDir.current = scrollY > lastScrollY.current ? "down" : "up";
+        lastScrollY.current = scrollY > 0 ? scrollY : 0;
+        ticking.current = false;
       });
-      ticking = true;
+      ticking.current = true;
     }
-  }, [lastScrollY, ticking, scrollDir]);
+  }, [scrollDir, threshold, lastScrollY, ticking]);
 
   useWindowEvent("scroll", onScroll);
 
