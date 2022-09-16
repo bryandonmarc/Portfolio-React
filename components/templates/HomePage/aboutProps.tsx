@@ -165,7 +165,7 @@ export const aboutProps: AboutProps = {
           color: "indigo",
         },
         {
-          id: "ASP.NET",
+          id: "ASP.NET C#",
           icon: AspNET,
           color: "violet",
         },

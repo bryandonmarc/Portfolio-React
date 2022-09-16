@@ -39,7 +39,7 @@ export const projects: ProjectsProps[] = [
   },
   {
     src: projectCovidTracker,
-    alt: "MCL COVID19 Case Tracker for Laguna",
+    alt: "MCL COVID19 Case Tracker",
     gif: projectCovidTrackerGif,
     href: "https://mcl-covid19tracker-laguna.netlify.app/",
     langs: ["nuxt", "tailwind", "sass", "apexCharts", "python", "netlify"],
