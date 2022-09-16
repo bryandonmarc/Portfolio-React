@@ -155,9 +155,9 @@ export const aboutProps: AboutProps = {
           fill: true,
         },
         {
-          id: "Python",
-          Icon: IconBrandPython,
-          color: "yellow",
+          id: "ASP.NET C#",
+          icon: AspNET,
+          color: "violet",
         },
         {
           id: "PHP",
@@ -165,9 +165,9 @@ export const aboutProps: AboutProps = {
           color: "indigo",
         },
         {
-          id: "ASP.NET C#",
-          icon: AspNET,
-          color: "violet",
+          id: "Python",
+          Icon: IconBrandPython,
+          color: "yellow",
         },
       ],
     },

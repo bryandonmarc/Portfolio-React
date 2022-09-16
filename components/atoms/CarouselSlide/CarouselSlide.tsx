@@ -21,7 +21,6 @@ export function CarouselSlide({
   color,
   href,
   langs,
-  description,
 }: CarouselSlideProps) {
   const { classes } = useStyles();
 
@@ -74,9 +73,6 @@ export function CarouselSlide({
                 ))}
               </Text>
             </div>
-            <Text size="sm" mt="xs">
-              {description}
-            </Text>
 
             <Button
               tabIndex={-1}
