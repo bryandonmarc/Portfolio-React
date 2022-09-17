@@ -9,7 +9,7 @@ interface TransitionProps {
 
 export function StaggeredTransition({
   children,
-  step = 0.25,
+  step = 0.3125,
   delay,
 }: TransitionProps) {
   return (
