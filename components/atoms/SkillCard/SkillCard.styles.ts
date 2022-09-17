@@ -3,6 +3,8 @@ import { createStyles, MantineColor } from "@mantine/core";
 export default createStyles(
   (theme, { color }: { color: MantineColor }, getRef) => ({
     item: {
+      ...theme.fn.focusStyles(),
+      opacity: `1 !important`,
       ref: getRef("item"),
       display: "flex",
       flexDirection: "column",
@@ -11,7 +13,6 @@ export default createStyles(
       textAlign: "center",
       borderRadius: theme.radius.md,
       height: 90,
-      transition: "box-shadow 150ms ease, transform 100ms ease",
       backgroundColor:
         theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
 
@@ -26,10 +27,11 @@ export default createStyles(
         cursor: "grab",
       },
 
-      [`&:active`]: {
+      [`&:active, &[aria-pressed='true']`]: {
         cursor: "grabbing",
         backgroundColor: theme.colors[color][6],
         color: theme.white,
+        zIndex: 1,
 
         [`& .${getRef("icon")} > *`]: {
           color: theme.white,

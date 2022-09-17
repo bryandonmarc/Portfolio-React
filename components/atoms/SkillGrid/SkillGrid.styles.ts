@@ -13,9 +13,9 @@ export default createStyles((theme, _params, getRef) => ({
     },
   },
 
-  drag: {
-    cursor: `grabbing !important` /* W3C standards syntax, should come least */,
-  },
+  // drag: {
+  //   cursor: `grabbing !important` /* W3C standards syntax, should come least */,
+  // },
 
   grid: {
     display: "grid",
