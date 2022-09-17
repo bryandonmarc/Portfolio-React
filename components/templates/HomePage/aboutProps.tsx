@@ -165,15 +165,14 @@ export const aboutProps: AboutProps = {
           color: "indigo",
         },
         {
-<<<<<<< HEAD
           id: "Python",
           Icon: IconBrandPython,
           color: "yellow",
-=======
+        },
+        {
           id: "ASP.NET C#",
           icon: AspNET,
           color: "violet",
->>>>>>> 5eb22248bcd95a8883d1ad9031aeff5d0c4f366c
         },
       ],
     },
