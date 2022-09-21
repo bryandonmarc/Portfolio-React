@@ -1,5 +1,8 @@
+import { openModal } from "@components/templates";
 import { Button, Group, useMantineTheme } from "@mantine/core";
 import { IconDownload, TablerIcon } from "@tabler/icons";
+import { useRouter } from "next/router";
+import React from "react";
 import useStyles from "./AboutActions.styles";
 
 export interface AboutActionsProps {
@@ -17,6 +20,7 @@ export function AboutActions({
 }: AboutActionsProps) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
+  const router = useRouter();
 
   return (
     <Group className={classes.wrapper}>
@@ -27,6 +31,12 @@ export function AboutActions({
         radius="md"
         leftIcon={IconPrimary && <IconPrimary size={20} />}
         className={classes.control}
+        component="a"
+        href="/projects"
+        onClick={(e: React.MouseEvent) => {
+          e.preventDefault();
+          router.push("/projects");
+        }}
       >
         {primary}
       </Button>
@@ -37,6 +47,7 @@ export function AboutActions({
         radius="md"
         leftIcon={IconSecondary && <IconSecondary size={20} />}
         className={classes.control}
+        onClick={openModal}
         sx={(theme) => ({
           "&:hover": {
             color:

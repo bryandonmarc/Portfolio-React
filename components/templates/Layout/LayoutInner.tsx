@@ -1,13 +1,14 @@
 import React from "react";
+import { NextRouter, useRouter } from "next/router";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider, ContextModalProps } from "@mantine/modals";
 import { SpotlightProvider, SpotlightAction } from "@mantine/spotlight";
 import { Text, Button } from "@mantine/core";
 import {
   IconHome,
-  IconDashboard,
   IconFileText,
   IconSearch,
+  IconCategory2,
 } from "@tabler/icons";
 import { Header } from "@components/organisms";
 
@@ -18,18 +19,18 @@ export interface LayoutProps {
   children: React.ReactNode;
 }
 
-const demonstrationModal = ({
-  context,
-  id,
-  innerProps,
-}: ContextModalProps<{ modalBody: string }>) => (
-  <>
-    <Text size="sm">{innerProps.modalBody}</Text>
-    <Button fullWidth mt="md" onClick={() => context.closeModal(id)}>
-      Close modal
-    </Button>
-  </>
-);
+// const demonstrationModal = ({
+//   context,
+//   id,
+//   innerProps,
+// }: ContextModalProps<{ modalBody: string }>) => (
+//   <>
+//     <Text size="sm">{innerProps.modalBody}</Text>
+//     <Button fullWidth mt="md" onClick={() => context.closeModal(id)}>
+//       Close modal
+//     </Button>
+//   </>
+// );
 
 // function getActions(data: ReturnType<typeof getDocsData>): SpotlightAction[] {
 //   return data.reduce<SpotlightAction[]>((acc, part) => {
@@ -67,25 +68,19 @@ const demonstrationModal = ({
 //   }, []);
 // }
 
-function getActions(): SpotlightAction[] {
+function getActions(router: NextRouter): SpotlightAction[] {
   return [
     {
       title: "Home",
-      description: "Get to home page",
-      onTrigger: () => console.log("Home"),
+      description: "Get to know me at first glance! 😊",
+      onTrigger: () => router.push("/"),
       icon: <IconHome size={18} />,
     },
     {
-      title: "Dashboard",
-      description: "Get full information about current system status",
-      onTrigger: () => console.log("Dashboard"),
-      icon: <IconDashboard size={18} />,
-    },
-    {
-      title: "Documentation",
-      description: "Visit documentation to lean more about all features",
-      onTrigger: () => console.log("Documentation"),
-      icon: <IconFileText size={18} />,
+      title: "Projects",
+      description: "See the projects I've worked on 😎",
+      onTrigger: () => router.push("/projects"),
+      icon: <IconCategory2 size={18} />,
     },
   ];
 }
@@ -93,10 +88,11 @@ function getActions(): SpotlightAction[] {
 export function LayoutInner({ children }: LayoutProps) {
   const { classes, cx } = useStyles();
   const [scroll] = useWindowScroll();
+  const router = useRouter();
 
   return (
     <SpotlightProvider
-      actions={getActions()}
+      actions={getActions(router)}
       searchIcon={<IconSearch size={18} />}
       searchPlaceholder="Search documentation"
       shortcut={["mod + K", "mod + P", "/"]}
@@ -113,8 +109,8 @@ export function LayoutInner({ children }: LayoutProps) {
         <main className={classes.main}>
           <div className={classes.content}>
             <ModalsProvider
-              labels={{ confirm: "Confirm", cancel: "Cancel" }}
-              modals={{ demonstration: demonstrationModal }}
+            // labels={{ confirm: "Confirm", cancel: "Cancel" }}
+            // modals={{ demonstration: demonstrationModal }}
             >
               <NotificationsProvider>{children}</NotificationsProvider>
             </ModalsProvider>

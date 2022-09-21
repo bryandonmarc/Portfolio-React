@@ -1,4 +1,4 @@
-export { Layout } from "./Layout";
+export { Layout, openModal } from "./Layout";
 export { HomePage } from "./HomePage";
 export { meta, projects, projectCards } from "./meta";
 export { languages } from "./languages";
