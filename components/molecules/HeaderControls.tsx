@@ -21,7 +21,7 @@ export function HeaderControls({ onSearch, ...others }: HeaderControlsProps) {
             marginLeft: theme.spacing.xs,
           },
         })}
-        // spacing="xs"
+        spacing={0}
         {...others}
       >
         <SearchControl onClick={onSearch} />
