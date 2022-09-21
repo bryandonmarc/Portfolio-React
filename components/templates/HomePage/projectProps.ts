@@ -3,6 +3,6 @@ import { projectCards } from "@components/templates";
 
 export const projectProps: ProjectProps = {
   carousel: {
-    sliders: projectCards,
+    sliders: projectCards.slice(0, 4),
   },
 };

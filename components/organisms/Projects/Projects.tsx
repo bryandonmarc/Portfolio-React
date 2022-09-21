@@ -1,5 +1,6 @@
 import { ProjectCard, ProjectCardProps } from "@components/molecules";
-import { Container, SimpleGrid, Stack } from "@mantine/core";
+import { ProjectTitle } from "@components/molecules";
+import { Box, Container, SimpleGrid, Stack } from "@mantine/core";
 import useStyles from "./Projects.styles";
 
 export interface ProjectsProps {
@@ -10,7 +11,8 @@ export function Projects({ projects }: ProjectsProps) {
   const { classes } = useStyles();
 
   return (
-    <Container size="xl" my="md" className={classes.cover}>
+    <Container size="xl" my="md" mb={48} className={classes.cover}>
+      <ProjectTitle />
       <SimpleGrid cols={2}>
         <Stack>
           {projects

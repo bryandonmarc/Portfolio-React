@@ -50,6 +50,7 @@ export function ProjectCard({
         component="a"
         target="_blank"
         href={href}
+        tabIndex={-1}
       >
         <Image quality="90" className={classes.image} src={src} alt={alt} />
 
@@ -73,6 +74,7 @@ export function ProjectCard({
               component="a"
               target="_blank"
               href={href}
+              tabIndex={-1}
             >
               {alt}
             </Text>

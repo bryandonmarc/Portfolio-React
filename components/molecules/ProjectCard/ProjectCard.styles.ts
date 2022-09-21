@@ -5,6 +5,14 @@ export default createStyles((theme, _params, getRef) => ({
   card: {
     backgroundColor:
       theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
+    boxShadow: `0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)`,
+    transitionProperty: "transform",
+    transitionTimingFunction: `cubic-bezier(0.4, 0, 0.2, 1)`,
+    transitionDuration: "150ms",
+
+    [`&:hover`]: {
+      transform: `scaleX(1.025) scaleY(1.025)`,
+    },
   },
 
   cardImage: {
