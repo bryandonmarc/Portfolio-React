@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import { NextPage } from "next";
 import { ProjectPage, ProjectPageProps } from "@components/templates";
 import { projectsProps } from "@components/templates/ProjectPage/projectsProps";
 
@@ -6,8 +6,8 @@ const projectPage: ProjectPageProps = {
   projectsProps,
 };
 
-const Test2: NextPage = () => {
+const Projects: NextPage = () => {
   return <ProjectPage {...projectPage} />;
 };
 
-export default Test2;
+export default Projects;
