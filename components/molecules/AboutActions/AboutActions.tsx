@@ -4,7 +4,7 @@ import { IconDownload, TablerIcon } from "@tabler/icons";
 import { useRouter } from "next/router";
 import React from "react";
 import useStyles from "./AboutActions.styles";
-
+import { NextLink } from "@mantine/next";
 export interface AboutActionsProps {
   primary: string;
   secondary: string;
@@ -31,12 +31,8 @@ export function AboutActions({
         radius="md"
         leftIcon={IconPrimary && <IconPrimary size={20} />}
         className={classes.control}
-        component="a"
+        component={NextLink}
         href="/projects"
-        onClick={(e: React.MouseEvent) => {
-          e.preventDefault();
-          router.push("/projects");
-        }}
       >
         {primary}
       </Button>

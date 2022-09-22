@@ -11,17 +11,22 @@ export function Projects({ projects }: ProjectsProps) {
   const { classes } = useStyles();
 
   return (
-    <Container size="xl" my="md" mb={48} className={classes.cover}>
+    <Container size={1420} my="md" mb={48} className={classes.cover}>
       <ProjectTitle />
-      <SimpleGrid cols={2}>
-        <Stack>
+      <SimpleGrid
+        breakpoints={[{ maxWidth: "md", cols: 1 }]}
+        cols={2}
+        className={classes.grid}
+        spacing={0}
+      >
+        <Stack className={classes.stack} spacing={0}>
           {projects
             .filter((_, i) => i % 2)
             .map((project: ProjectCardProps) => (
               <ProjectCard {...project} key={project.alt} />
             ))}
         </Stack>
-        <Stack>
+        <Stack className={classes.stack} spacing={0}>
           {projects
             .filter((_, i) => !(i % 2))
             .map((project: ProjectCardProps) => (

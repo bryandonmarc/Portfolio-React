@@ -1,4 +1,9 @@
-import { fadeIn, fadeOut, LanguageControl } from "@components/atoms";
+import {
+  fadeIn,
+  fadeOut,
+  LanguageControl,
+  SliderLogo,
+} from "@components/atoms";
 import { Languages } from "@components/templates";
 import { ActionIcon, Card, Group, Stack, Text } from "@mantine/core";
 import useStyles from "./ProjectCard.styles";
@@ -6,14 +11,11 @@ import Image, { StaticImageData } from "next/future/image";
 import { IconExternalLink } from "@tabler/icons";
 import { useEventListener, useMergedRef } from "@mantine/hooks";
 import { useRef } from "react";
+import { ProjectsProps } from "@components/templates/meta";
 
-export interface ProjectCardProps {
-  src: string | StaticImageData;
-  gif: string | StaticImageData;
-  alt: string;
-  href: string;
-  langs: Languages[];
-  description: string;
+export interface ProjectCardProps extends ProjectsProps {
+  color: string;
+  Logo: SliderLogo;
 }
 
 export function ProjectCard({
@@ -24,7 +26,7 @@ export function ProjectCard({
   langs,
   description,
 }: ProjectCardProps) {
-  const { classes, theme } = useStyles();
+  const { classes } = useStyles({ hasGif: Boolean(gif) });
   // Animated display toggle transition/animation for proper lazy loading
   // https://stackoverflow.com/a/9334132
   const ref = useRef();
@@ -54,22 +56,24 @@ export function ProjectCard({
       >
         <Image quality="90" className={classes.image} src={src} alt={alt} />
 
-        <div className={classes.container}>
-          <Image
-            quality="90"
-            src={gif}
-            className={classes.gif}
-            sizes="100vw"
-            alt={alt}
-          />
-        </div>
+        {gif && (
+          <div className={classes.container}>
+            <Image
+              quality="90"
+              src={gif}
+              className={classes.gif}
+              sizes="100vw"
+              alt={alt}
+            />
+          </div>
+        )}
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
         <Stack>
-          <Group position="apart">
+          <Group position="apart" noWrap={true}>
             <Text
-              size="lg"
+              size="xl"
               weight={500}
               component="a"
               target="_blank"

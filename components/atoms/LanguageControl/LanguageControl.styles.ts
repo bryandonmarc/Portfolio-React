@@ -9,7 +9,9 @@ export default createStyles(
         : theme.fn.rgba(languages[lang].color, 0.1),
       color: darken
         ? theme.fn.darken(languages[lang].color, 0.25)
-        : ["unity", "apexCharts", "heroku", "pwa"].includes(lang)
+        : ["unity", "apexCharts", "heroku", "pwa", "unocss", "i18n"].includes(
+            lang
+          )
         ? theme.colorScheme === "dark"
           ? theme.white
           : languages[lang].color
@@ -22,6 +24,11 @@ export default createStyles(
     },
 
     leftSection: {
+      [`& > *`]: {
+        color:
+          theme.colorScheme === "dark" ? theme.white : languages[lang].color,
+      },
+
       [theme.fn.smallerThan("xs")]: {
         marginRight: 0,
       },

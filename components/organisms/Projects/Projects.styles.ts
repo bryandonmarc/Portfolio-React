@@ -7,4 +7,18 @@ export default createStyles((theme) => ({
       theme.spacing.lg * 4
     }px + ${HEADER_HEIGHT}px) !important`,
   },
+
+  stack: {
+    [`& > *`]: {
+      // marginRight: 4,
+      marginBottom: 16,
+    },
+  },
+
+  grid: {
+    [`& > *`]: {
+      // marginRight: 4,
+      marginRight: 16,
+    },
+  },
 }));

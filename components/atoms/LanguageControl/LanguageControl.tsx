@@ -6,7 +6,7 @@ import useStyles from "./LanguageControl.styles";
 export function LanguageControl({
   lang,
   darken = true,
-  size = "xl",
+  size = "md",
 }: {
   lang: Languages;
   darken?: boolean;
@@ -41,7 +41,10 @@ export function LanguageControl({
             },
           })}
         >
-          <Icon style={{ fontSize: "inherit" }} icon={languages[lang].icon} />
+          <Icon
+            style={{ fontSize: "inherit", color: "currentcolor" }}
+            icon={languages[lang].icon}
+          />
         </ThemeIcon>
       }
     >

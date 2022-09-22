@@ -14,6 +14,11 @@ import NodeJS from "@iconify-icons/logos/nodejs-icon";
 import Firebase from "@iconify-icons/logos/firebase";
 import Unity from "@iconify-icons/logos/unity";
 import Heroku from "@iconify-icons/logos/heroku-icon";
+import UnoCSS from "@iconify-icons/logos/unocss";
+import Vite from "@iconify-icons/logos/vitejs";
+import TypeScript from "@iconify-icons/logos/typescript-icon";
+import AWS from "@iconify-icons/logos/aws";
+import i18n from "@iconify-icons/mdi/web";
 import { IconifyIcon } from "@iconify/react";
 
 export interface LanguageProps {
@@ -38,7 +43,12 @@ export type Languages =
   | "node"
   | "firebase"
   | "unity"
-  | "heroku";
+  | "heroku"
+  | "vite"
+  | "unocss"
+  | "typescript"
+  | "aws"
+  | "i18n";
 
 export const languages: {
   [key in Languages]: LanguageProps;
@@ -122,5 +132,30 @@ export const languages: {
     name: "Heroku",
     icon: Heroku,
     color: "#430098",
+  },
+  vite: {
+    name: "Vite",
+    icon: Vite,
+    color: "#bd34fe",
+  },
+  unocss: {
+    name: "UnoCSS",
+    icon: UnoCSS,
+    color: "#222C37",
+  },
+  typescript: {
+    name: "TypeScript",
+    icon: TypeScript,
+    color: "#228BE6",
+  },
+  aws: {
+    name: "AWS",
+    icon: AWS,
+    color: "#FF9900",
+  },
+  i18n: {
+    name: "i18n",
+    icon: i18n,
+    color: "#222C37",
   },
 };
