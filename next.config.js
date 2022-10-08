@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    domains: ["source.unsplash.com", "images.unsplash.com", "picsum.photos"],
+    formats: ["image/avif", "image/webp"],
   },
   experimental: {
     images: {
