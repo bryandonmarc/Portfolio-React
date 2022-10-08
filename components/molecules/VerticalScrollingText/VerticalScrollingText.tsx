@@ -1,3 +1,4 @@
+import { JobTitle } from "@components/atoms";
 import { Title, Text, List, Group } from "@mantine/core";
 import useStyles from "./VerticalScrollingText.styles";
 
@@ -15,35 +16,11 @@ export function VerticalScrollingText({ textArray }: TextProps) {
         <List className={classes.list} sx={{ fontSize: "inherit" }}>
           {textArray.map((listItem, index) => (
             <List.Item key={index} className={classes.item}>
-              <Text
-                component="span"
-                sx={(theme) => ({ color: theme.primaryColor })}
-              >
-                &lt;
-              </Text>
-              <Text component="span">{listItem.replace(/ /g, "")}</Text>
-              <Text
-                component="span"
-                sx={(theme) => ({ color: theme.primaryColor })}
-              >
-                &frasl;&gt;
-              </Text>
+              <JobTitle title={listItem} />
             </List.Item>
           ))}
           <List.Item className={classes.item}>
-            <Text
-              component="span"
-              sx={(theme) => ({ color: theme.primaryColor })}
-            >
-              &lt;
-            </Text>
-            <Text component="span">{textArray[0].replace(/ /g, "")}</Text>
-            <Text
-              component="span"
-              sx={(theme) => ({ color: theme.primaryColor })}
-            >
-              &frasl;&gt;
-            </Text>
+            <JobTitle title={textArray[0]} />
           </List.Item>
         </List>
       </Group>

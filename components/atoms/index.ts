@@ -34,3 +34,6 @@ export type { SliderLogo } from "./SliderLogo";
 export type { CarouselSlideProps } from "./CarouselSlide";
 
 export { LanguageControl } from "./LanguageControl";
+
+export { JobTitle } from "./JobTitle";
+ export type { JobTitleProps } from "./JobTitle";
