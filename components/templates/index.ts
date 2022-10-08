@@ -8,3 +8,6 @@ export type { Languages, LanguageProps } from "./languages";
 
 export { ProjectPage } from "./ProjectPage";
 export type { ProjectPageProps } from "./ProjectPage";
+
+export { AboutPage } from "./AboutPage";
+ export type { AboutPageProps } from "./AboutPage";

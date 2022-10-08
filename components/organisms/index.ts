@@ -10,4 +10,7 @@ export { Project } from "./Project";
 export type { ProjectProps } from "./Project";
 
 export { Projects } from "./Projects";
- export type { ProjectsProps } from "./Projects";
+export type { ProjectsProps } from "./Projects";
+
+export { AboutOrganism } from "./AboutOrganism";
+export type { AboutOrganismProps } from "./AboutOrganism";

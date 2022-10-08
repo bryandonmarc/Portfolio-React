@@ -37,3 +37,6 @@ export { LanguageControl } from "./LanguageControl";
 
 export { JobTitle } from "./JobTitle";
  export type { JobTitleProps } from "./JobTitle";
+
+export { StepperContent } from "./StepperContent";
+ export type { StepperContentProps } from "./StepperContent";

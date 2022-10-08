@@ -28,3 +28,6 @@ export { VerticalSlider } from "./VerticalSlider";
 export type { VerticalSliderProps } from "./VerticalSlider";
 
 export { ProjectTitle } from "./ProjectTitle";
+
+export { AboutPageTitle } from "./AboutPageTitle";
+// export type { AboutPageTitleProps } from "./AboutPageTitle";

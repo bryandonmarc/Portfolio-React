@@ -9,6 +9,7 @@ import {
   IconFileText,
   IconSearch,
   IconCategory2,
+  IconBulb,
 } from "@tabler/icons";
 import { Header } from "@components/organisms";
 
@@ -81,6 +82,12 @@ function getActions(router: NextRouter): SpotlightAction[] {
       description: "See the projects I've worked on 😎",
       onTrigger: () => router.push("/projects"),
       icon: <IconCategory2 size={18} />,
+    },
+    {
+      title: "About",
+      description: "Know more about me, my story, and my accomplishments! 💎",
+      onTrigger: () => router.push("/about"),
+      icon: <IconBulb size={18} />,
     },
   ];
 }
