@@ -14,8 +14,8 @@ import { useRef } from "react";
 import { ProjectsProps } from "@components/templates/meta";
 
 export interface ProjectCardProps extends ProjectsProps {
-  color: string;
-  Logo: SliderLogo;
+  gif?: string | StaticImageData;
+  hideContent?: boolean;
 }
 
 export function ProjectCard({
@@ -25,23 +25,32 @@ export function ProjectCard({
   href,
   langs,
   description,
+  hideContent = false,
 }: ProjectCardProps) {
   const { classes } = useStyles({ hasGif: Boolean(gif) });
   // Animated display toggle transition/animation for proper lazy loading
   // https://stackoverflow.com/a/9334132
   const ref = useRef();
-  const animationStart = useEventListener("animationstart", (e) => {
-    const target = e.target! as HTMLElement;
-    if (e.animationName === fadeIn.name) {
-      target.classList.add("entered");
-    }
-  });
-  const animationEnd = useEventListener("animationend", (e) => {
-    const target = e.target! as HTMLElement;
-    if (e.animationName === fadeOut.name) {
-      target.classList.remove("entered");
-    }
-  });
+  const animationStart = useEventListener(
+    "animationstart",
+    (e) => {
+      const target = e.target! as HTMLElement;
+      if (e.animationName === fadeIn.name) {
+        target.classList.add("entered");
+      }
+    },
+    { passive: true }
+  );
+  const animationEnd = useEventListener(
+    "animationend",
+    (e) => {
+      const target = e.target! as HTMLElement;
+      if (e.animationName === fadeOut.name) {
+        target.classList.remove("entered");
+      }
+    },
+    { passive: true }
+  );
   const mergedRef = useMergedRef(ref, animationStart, animationEnd);
 
   return (
@@ -105,11 +114,13 @@ export function ProjectCard({
         </Stack>
       </Card.Section>
 
-      <Card.Section className={classes.section}>
-        <Text size="sm" mt="xs">
-          {description}
-        </Text>
-      </Card.Section>
+      {!hideContent && (
+        <Card.Section className={classes.section}>
+          <Text size="sm" mt="xs">
+            {description}
+          </Text>
+        </Card.Section>
+      )}
 
       {/* <Group mt="xs">
         <Button radius="md" style={{ flex: 1 }}>

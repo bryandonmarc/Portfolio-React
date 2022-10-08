@@ -10,8 +10,18 @@ export function ProjectTitle() {
         Stuff I&apos;ve <span className={classes.highlight}>worked</span> on.
       </Title>
       <Text size="sm" color="dimmed" className={classes.description}>
-        Here are some of the projects I spearheaded and built. Hover over them
-        and have a look 😊
+        Here are some of the projects I spearheaded and built.{" "}
+        <Text
+          sx={(theme) => ({
+            [theme.fn.smallerThan("xl")]: {
+              display: "none",
+            },
+
+            display: "inline",
+          })}
+        >
+          Hover over them and have a look 😊
+        </Text>
       </Text>
     </>
   );

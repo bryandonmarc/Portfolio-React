@@ -1,6 +1,6 @@
 export { Layout, openModal } from "./Layout";
 export { HomePage } from "./HomePage";
-export { meta, projects, projectCards } from "./meta";
+export { meta, projects, carouselSlides, projectCards } from "./meta";
 export { languages } from "./languages";
 
 export type { HomePageProps } from "./HomePage";

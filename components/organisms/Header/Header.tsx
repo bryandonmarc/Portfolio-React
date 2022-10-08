@@ -30,7 +30,7 @@ export function Header() {
     }
   }, [scrollDir, threshold, lastScrollY, ticking]);
 
-  useWindowEvent("scroll", onScroll);
+  useWindowEvent("scroll", onScroll, { passive: true });
 
   return (
     <>

@@ -32,7 +32,6 @@ export const projects: ProjectsProps[] = [
   {
     src: projectRenu,
     alt: "RENU Naturals",
-    gif: projectRenuGif,
     href: "https://renunaturals.com/",
     langs: ["shopify", "alpine", "tailwind", "pwa", "googleAnalytics"],
     description:
@@ -41,16 +40,14 @@ export const projects: ProjectsProps[] = [
   {
     src: projectCandle,
     alt: "1220 Candle Company",
-    gif: projectCandleGif,
     href: "https://1220candlecompany.com/",
-    langs: ["shopify", "alpine", "tailwind", "googleAnalytics"],
+    langs: ["shopify", "alpine", "tailwind", "sass", "googleAnalytics"],
     description:
       "1220 Candle Company is a Mississippi based candle company with a mission to simply create luxury candles with alluring aromas and fragrances, luscious and moisturizing body butters, sensuous room sprays, and captivating wax melts.",
   },
   {
     src: projectCovidTracker,
     alt: "MCL COVID19 Case Tracker",
-    gif: projectCovidTrackerGif,
     href: "https://mcl-covid19tracker-laguna.netlify.app/",
     langs: ["nuxt", "tailwind", "sass", "apexCharts", "python", "netlify"],
     description:
@@ -59,33 +56,43 @@ export const projects: ProjectsProps[] = [
   {
     src: projectEdutech,
     alt: "eduGames Teach",
-    gif: projectEdutechGif,
     href: "https://edu-tech-ssr.herokuapp.com/",
     langs: ["vue", "tailwind", "node", "firebase", "unity", "heroku"],
     description:
-      "Experience a new way of learning for your students using this teaching companion service featuring gamified learning with a fun, interactive educational game! It also serves as a supplementary eLearning system with an integrated metric model on detecting, analyzing, and predicting learner engagement",
+      "Experience a new way of learning for your students using this teaching companion service featuring gamified learning with a fun, interactive educational game! It also serves as a supplementary eLearning system with an integrated metric model on detecting, analyzing, and predicting learner engagement.",
   },
-  {
-    src: projectPortfolio,
-    alt: "Portfolio-Vue",
-    href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
-    langs: ["vue", "typescript", "vite", "unocss", "pwa", "i18n", "aws"],
-    description:
-      "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
-  },
+  // {
+  //   src: projectPortfolio,
+  //   alt: "Portfolio-Vue",
+  //   href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
+  //   langs: ["vue", "typescript", "vite", "unocss", "pwa", "i18n", "aws"],
+  //   description:
+  //     "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
+  // },
 ];
 
-const projectCardProps: { color: string; Logo: SliderLogo }[] = [
-  { color: "#223F35", Logo: RenuLogo }, // RENU Naturals
-  { color: "#003E4D", Logo: CandleLogo }, // 1220 Candle Company
-  { color: "#00204D", Logo: CovidTrackerLogo }, // MCL Covid Tracker
-  { color: "#301C80", Logo: EduTechLogo }, // eduGames Teach
+const projectCardProps: {
+  color: string;
+  Logo: SliderLogo;
+  gif: string | StaticImageData;
+}[] = [
+  { color: "#223F35", Logo: RenuLogo, gif: projectRenuGif }, // RENU Naturals
+  { color: "#003E4D", Logo: CandleLogo, gif: projectCandleGif }, // 1220 Candle Company
+  { color: "#00204D", Logo: CovidTrackerLogo, gif: projectCovidTrackerGif }, // MCL Covid Tracker
+  { color: "#301C80", Logo: EduTechLogo, gif: projectEdutechGif }, // eduGames Teach
 ];
 
-export const projectCards: CarouselSlideProps[] = projects.map(
+export const carouselSlides: CarouselSlideProps[] = projects.slice(0, 4).map(
   (project: ProjectsProps, i): CarouselSlideProps => ({
     ...project,
     ...projectCardProps[i],
+  })
+);
+
+export const projectCards: ProjectCardProps[] = projects.map(
+  (project: ProjectsProps, i): ProjectCardProps => ({
+    ...project,
+    gif: projectCardProps[i]?.gif,
   })
 );
 

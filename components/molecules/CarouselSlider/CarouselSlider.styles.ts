@@ -38,7 +38,7 @@ export default createStyles((theme, _params, getRef) => ({
   },
 
   root: {
-    [theme.fn.smallerThan(1280)]: {
+    [theme.fn.smallerThan(1279)]: {
       display: "none",
     },
 

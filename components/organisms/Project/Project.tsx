@@ -1,13 +1,17 @@
 import { CarouselSlider, CarouselSliderProps } from "@components/molecules";
 import { ProjectTitle } from "@components/molecules/ProjectTitle/ProjectTitle";
-import { VerticalSlider } from "@components/molecules/VerticalSlider";
+import {
+  VerticalSlider,
+  VerticalSliderProps,
+} from "@components/molecules/VerticalSlider";
 import { Box, Container } from "@mantine/core";
 
 export interface ProjectProps {
   carousel: CarouselSliderProps;
+  slider: VerticalSliderProps;
 }
 
-export function Project({ carousel }: ProjectProps) {
+export function Project({ carousel, slider }: ProjectProps) {
   return (
     <Box
       component="section"
@@ -19,7 +23,7 @@ export function Project({ carousel }: ProjectProps) {
       <Container size={1420}>
         <ProjectTitle />
         <CarouselSlider {...carousel}></CarouselSlider>
-        <VerticalSlider></VerticalSlider>
+        <VerticalSlider {...slider}></VerticalSlider>
       </Container>
     </Box>
   );
