@@ -21,7 +21,7 @@ export default createStyles((theme) => ({
         top: `50%`,
       },
       [`.mantine-Stepper-stepLabel`]: {
-        color: theme.primaryColor,
+        color: theme.colors[theme.primaryColor][4],
         fontWeight: "bolder",
       },
       [`.mantine-Stepper-stepIcon`]: {
@@ -37,31 +37,31 @@ export default createStyles((theme) => ({
         background:
           theme.colorScheme === "dark"
             ? `conic-gradient(
-              ${theme.primaryColor} 0.08333turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.08333turn, 
               #1A1B1E 0.08333turn 0.16667turn, 
-              ${theme.primaryColor} 0.16667turn 0.25turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.16667turn 0.25turn, 
               #1A1B1E 0.25turn 0.33333turn, 
-              ${theme.primaryColor} 0.33333turn 0.41667turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.33333turn 0.41667turn, 
               #1A1B1E 0.41667turn 0.5turn, 
-              ${theme.primaryColor} 0.5turn 0.58333turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.5turn 0.58333turn, 
               #1A1B1E 0.58333turn 0.66667turn, 
-              ${theme.primaryColor} 0.66667turn 0.75turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.66667turn 0.75turn, 
               #1A1B1E 0.75turn 0.83333turn, 
-              ${theme.primaryColor} 0.83333turn 0.91667turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.83333turn 0.91667turn, 
               #1A1B1E 0.91667turn 1.00turn
             )`
             : `conic-gradient(
-              ${theme.primaryColor} 0.08333turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.08333turn, 
               #fff 0.08333turn 0.16667turn, 
-              ${theme.primaryColor} 0.16667turn 0.25turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.16667turn 0.25turn, 
               #fff 0.25turn 0.33333turn, 
-              ${theme.primaryColor} 0.33333turn 0.41667turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.33333turn 0.41667turn, 
               #fff 0.41667turn 0.5turn, 
-              ${theme.primaryColor} 0.5turn 0.58333turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.5turn 0.58333turn, 
               #fff 0.58333turn 0.66667turn, 
-              ${theme.primaryColor} 0.66667turn 0.75turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.66667turn 0.75turn, 
               #fff 0.75turn 0.83333turn, 
-              ${theme.primaryColor} 0.83333turn 0.91667turn, 
+              ${theme.colors[theme.primaryColor][4]} 0.83333turn 0.91667turn, 
               #fff 0.91667turn 1.00turn
             )`,
         width: `calc(100% * 1.41421356237)`,
@@ -95,7 +95,7 @@ export default createStyles((theme) => ({
   },
   stepIcon: {
     backgroundColor: theme.colorScheme === "dark" ? "#1A1B1E" : theme.white,
-    borderColor: theme.primaryColor,
+    borderColor: theme.colors[theme.primaryColor][4],
     zIndex: 1,
     margin: 0,
     position: "absolute",

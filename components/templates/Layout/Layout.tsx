@@ -36,7 +36,7 @@ export function Layout({ children }: LayoutProps) {
         withNormalizeCSS
         theme={{
           colorScheme,
-          primaryColor: "violet",
+          primaryColor: colorScheme === "dark" ? "grape" : "violet",
           // headings: { fontFamily: "Greycliff CF, sans serif" },
         }}
       >

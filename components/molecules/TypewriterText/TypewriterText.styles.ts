@@ -15,14 +15,14 @@ const blinkCaret = (theme: MantineTheme) =>
       borderColor: "transparent",
     },
     "50%": {
-      borderColor: theme.primaryColor,
+      borderColor: theme.colors[theme.primaryColor][4],
     },
   });
 
 export default createStyles((theme) => ({
   typewriter: {
     overflow: "hidden",
-    borderRight: `0.15em solid ${theme.primaryColor}`,
+    borderRight: `0.15em solid ${theme.colors[theme.primaryColor][4]}`,
     margin: "0 auto",
     paddingRight: "0.1em",
     animation: `${typing} 3.5s steps(40, end), ${blinkCaret(

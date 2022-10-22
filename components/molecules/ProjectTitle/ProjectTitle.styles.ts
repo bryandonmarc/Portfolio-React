@@ -19,14 +19,14 @@ export default createStyles((theme) => ({
       theme.colorScheme === "dark"
         ? theme.fn.variant({
             variant: "light",
-            color: theme.primaryColor,
+            color: theme.colors[theme.primaryColor][4],
           }).background
         : "unset",
     backgroundImage:
       theme.colorScheme === "dark"
         ? theme.fn.variant({
             variant: "light",
-            color: theme.primaryColor,
+            color: theme.colors[theme.primaryColor][4],
           }).background
         : theme.fn.variant({
             variant: "gradient",

@@ -18,7 +18,9 @@ export function AboutOrganism({ jobs }: AboutOrganismProps) {
   return (
     <Stepper active={0} orientation="vertical" classNames={classes}>
       <Stepper.Step
-        icon={<IconDiamond style={{ color: theme.primaryColor }} />}
+        icon={
+          <IconDiamond style={{ color: theme.colors[theme.primaryColor][4] }} />
+        }
         label={"An upcoming opportunity!"}
         description={
           <>

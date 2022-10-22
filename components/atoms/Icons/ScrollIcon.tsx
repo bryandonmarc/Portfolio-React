@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
 
   pointer: {
     animation: `${scrollDown} 1.5s infinite`,
-    fill: theme.primaryColor,
+    fill: theme.colors[theme.primaryColor][4],
   },
 
   delay: {

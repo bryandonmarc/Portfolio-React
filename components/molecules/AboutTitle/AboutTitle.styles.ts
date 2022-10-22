@@ -21,7 +21,9 @@ export default createStyles((theme) => ({
   dots: {
     position: "absolute",
     color:
-      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.primaryColor,
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[5]
+        : theme.colors[theme.primaryColor][4],
 
     [theme.fn.smallerThan("md")]: {
       display: "none",
@@ -54,7 +56,7 @@ export default createStyles((theme) => ({
             theme.colors.grape[3],
             theme.colors.cyan[5],
             theme.colors.violet[3],
-            theme.primaryColor
+            theme.colors[theme.primaryColor][3]
           )
         : theme.fn.linearGradient(
             -45,
@@ -62,7 +64,7 @@ export default createStyles((theme) => ({
             theme.colors.grape[6],
             theme.colors.cyan[6],
             theme.colors.violet[6],
-            theme.primaryColor
+            theme.colors[theme.primaryColor][4]
           ),
     backgroundSize: "400% 400%",
     animation: `${animatedGradient} 6s ease infinite`,
