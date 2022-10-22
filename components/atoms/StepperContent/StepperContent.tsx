@@ -25,7 +25,22 @@ export function StepperContent({
       <JobTitle title={jobTitle} />
       <Text>{jobDate}</Text>
 
-      <List my="lg" withPadding>
+      <List
+        my="lg"
+        withPadding
+        listStyleType="disc"
+        styles={{
+          item: {
+            whiteSpace: "nowrap",
+          },
+          itemWrapper: {
+            display: "inline-flex",
+            flexDirection: "column",
+            whiteSpace: "normal",
+            marginRight: "1.125rem",
+          },
+        }}
+      >
         {jobDescription.map((desc, i) => (
           <List.Item key={i}>{desc}</List.Item>
         ))}

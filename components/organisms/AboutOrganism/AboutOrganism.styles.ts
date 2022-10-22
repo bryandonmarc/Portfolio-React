@@ -94,6 +94,7 @@ export default createStyles((theme) => ({
     flexShrink: 0,
   },
   stepIcon: {
+    backgroundColor: theme.colorScheme === "dark" ? "#1A1B1E" : theme.white,
     borderColor: theme.primaryColor,
     zIndex: 1,
     margin: 0,

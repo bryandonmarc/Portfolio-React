@@ -19,15 +19,17 @@ export function AboutOrganism({ jobs }: AboutOrganismProps) {
     <Stepper active={0} orientation="vertical" classNames={classes}>
       <Stepper.Step
         icon={<IconDiamond style={{ color: theme.primaryColor }} />}
-        label={"My Future Company"}
+        label={"An upcoming opportunity!"}
         description={
           <>
-            <JobTitle title="Dream Job" />
-            <Text mb="lg">
+            <JobTitle title="Future Job" />
+            {/* <Text mb="lg">
               present – <i>future</i>
-            </Text>
+            </Text> */}
             <List my="lg" withPadding>
               <List.Item>I am confident, my pamilee</List.Item>
+              <List.Item>Black is out, gold is in</List.Item>
+              <List.Item>Mabuting bata</List.Item>
             </List>
           </>
         }
