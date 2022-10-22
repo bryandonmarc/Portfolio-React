@@ -10,6 +10,12 @@ export function ColorSchemeControl() {
     <HeaderControl
       onClick={() => toggleColorScheme()}
       tooltip={`${colorScheme === "dark" ? "Light" : "Dark"} mode`}
+      sx={(theme) => ({
+        color:
+          theme.colorScheme === "dark"
+            ? theme.colors[theme.primaryColor][4]
+            : theme.colors[theme.primaryColor][6],
+      })}
     >
       {colorScheme === "dark" ? (
         <IconSun size={22} stroke={1.5} />
