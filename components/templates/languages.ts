@@ -19,6 +19,11 @@ import Vite from "@iconify-icons/logos/vitejs";
 import TypeScript from "@iconify-icons/logos/typescript-icon";
 import AWS from "@iconify-icons/logos/aws";
 import i18n from "@iconify-icons/mdi/web";
+import React from "@iconify-icons/logos/react";
+import NextJS from "@iconify-icons/logos/nextjs-icon";
+import Mantine from "@iconify-icons/logos/mantine-icon";
+import Vercel from "@iconify-icons/logos/vercel-icon";
+import Bash from "@iconify-icons/logos/bash-icon";
 import { IconifyIcon } from "@iconify/react";
 
 export interface LanguageProps {
@@ -48,7 +53,12 @@ export type Languages =
   | "unocss"
   | "typescript"
   | "aws"
-  | "i18n";
+  | "i18n"
+  | "react"
+  | "nextjs"
+  | "mantine"
+  | "vercel"
+  | "bash";
 
 export const languages: {
   [key in Languages]: LanguageProps;
@@ -156,6 +166,31 @@ export const languages: {
   i18n: {
     name: "i18n",
     icon: i18n,
+    color: "#222C37",
+  },
+  react: {
+    name: "React",
+    icon: React,
+    color: "#00D8FF",
+  },
+  nextjs: {
+    name: "Next.js",
+    icon: NextJS,
+    color: "#222C37",
+  },
+  mantine: {
+    name: "Mantine",
+    icon: Mantine,
+    color: "#339AF0",
+  },
+  vercel: {
+    name: "Vercel",
+    icon: Vercel,
+    color: "#222C37",
+  },
+  bash: {
+    name: "Bash",
+    icon: Bash,
     color: "#222C37",
   },
 };

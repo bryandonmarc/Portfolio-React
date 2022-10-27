@@ -1,17 +1,27 @@
 import { languages, Languages } from "@components/templates";
 import { createStyles } from "@mantine/core";
 
+const default_list = [
+  "unity",
+  "apexCharts",
+  "heroku",
+  "pwa",
+  "unocss",
+  "i18n",
+  "nextjs",
+  "vercel",
+  "bash",
+];
+
 export default createStyles(
   (theme, { lang, darken }: { lang: Languages; darken: boolean }) => ({
     root: {
-      background: ["unity", "apexCharts", "heroku", "pwa"].includes(lang)
+      background: default_list.includes(lang)
         ? theme.fn.rgba(languages[lang].color, 0.25)
         : theme.fn.rgba(languages[lang].color, 0.1),
       color: darken
         ? theme.fn.darken(languages[lang].color, 0.25)
-        : ["unity", "apexCharts", "heroku", "pwa", "unocss", "i18n"].includes(
-            lang
-          )
+        : default_list.includes(lang)
         ? theme.colorScheme === "dark"
           ? theme.white
           : languages[lang].color
