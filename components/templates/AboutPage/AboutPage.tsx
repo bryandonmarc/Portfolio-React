@@ -1,16 +1,19 @@
 import { AboutPageTitle } from "@components/molecules";
 import {
-  AboutOrganism,
-  AboutOrganismProps,
+  AboutPageEducation,
+  AboutPageEducationProps,
+  AboutPageJourney,
+  AboutPageJourneyProps,
   HEADER_HEIGHT,
 } from "@components/organisms";
 import { Center, Container } from "@mantine/core";
 
 export interface AboutPageProps {
-  aboutProps: AboutOrganismProps;
+  journeyProps: AboutPageJourneyProps;
+  educationProps: AboutPageEducationProps;
 }
 
-export function AboutPage({ aboutProps }: AboutPageProps) {
+export function AboutPage({ journeyProps, educationProps }: AboutPageProps) {
   return (
     <Center
       component="section"
@@ -20,8 +23,10 @@ export function AboutPage({ aboutProps }: AboutPageProps) {
       })}
     >
       <Container size={1420}>
-        <AboutPageTitle />
-        <AboutOrganism {...aboutProps} />
+        <AboutPageTitle title="Journey" emoji="💼" />
+        <AboutPageJourney {...journeyProps} />
+        <AboutPageTitle title="Education" emoji="✍️" />
+        <AboutPageEducation {...educationProps} />
       </Container>
     </Center>
   );

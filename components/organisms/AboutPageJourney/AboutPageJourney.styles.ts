@@ -16,6 +16,11 @@ const spin = keyframes({
 
 export default createStyles((theme) => ({
   step: {
+    [`&:last-child`]: {
+      [`.mantine-Stepper-verticalSeparator`]: {
+        height: `50%`,
+      },
+    },
     [`&:first-child`]: {
       [`.mantine-Stepper-verticalSeparator`]: {
         top: `50%`,

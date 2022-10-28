@@ -24,6 +24,29 @@ import NextJS from "@iconify-icons/logos/nextjs-icon";
 import Mantine from "@iconify-icons/logos/mantine-icon";
 import Vercel from "@iconify-icons/logos/vercel-icon";
 import Bash from "@iconify-icons/logos/bash-icon";
+import GraphQL from "@iconify-icons/logos/graphql";
+import PHP from "@iconify-icons/logos/php";
+import Lavarel from "@iconify-icons/logos/laravel";
+import JQuery from "@iconify-icons/mdi/jquery";
+import MySQL from "@iconify-icons/logos/mysql-icon";
+import Bootstrap from "@iconify-icons/logos/bootstrap";
+import CSharp from "@iconify-icons/logos/c-sharp";
+import WEKA from "@iconify-icons/mdi/code";
+import Java from "@iconify-icons/logos/java";
+import Kotlin from "@iconify-icons/logos/kotlin-icon";
+import Android from "@iconify-icons/logos/android-icon";
+import Strapi from "@iconify-icons/logos/strapi-icon";
+import Git from "@iconify-icons/logos/git-icon";
+import Github from "@iconify-icons/logos/github-icon";
+import npm from "@iconify-icons/logos/npm-icon";
+import Yarn from "@iconify-icons/logos/yarn";
+import pnpm from "@iconify-icons/logos/pnpm";
+import Webpack from "@iconify-icons/logos/webpack";
+import Javascript from "@iconify-icons/logos/javascript";
+import HTML from "@iconify-icons/logos/html-5";
+import CSS from "@iconify-icons/logos/css-3";
+import Windows from "@iconify-icons/logos/microsoft-windows";
+import Linux from "@iconify-icons/logos/linux-tux";
 import { IconifyIcon } from "@iconify/react";
 
 export interface LanguageProps {
@@ -58,7 +81,30 @@ export type Languages =
   | "nextjs"
   | "mantine"
   | "vercel"
-  | "bash";
+  | "graphql"
+  | "bash"
+  | "php"
+  | "laravel"
+  | "jquery"
+  | "mysql"
+  | "bootstrap"
+  | "csharp"
+  | "weka"
+  | "java"
+  | "kotlin"
+  | "android"
+  | "strapi"
+  | "git"
+  | "github"
+  | "npm"
+  | "yarn"
+  | "pnpm"
+  | "webpack"
+  | "javascript"
+  | "html"
+  | "css"
+  | "windows"
+  | "linux";
 
 export const languages: {
   [key in Languages]: LanguageProps;
@@ -191,6 +237,121 @@ export const languages: {
   bash: {
     name: "Bash",
     icon: Bash,
+    color: "#222C37",
+  },
+  graphql: {
+    name: "GraphQL",
+    icon: GraphQL,
+    color: "#E535AB",
+  },
+  php: {
+    name: "PHP",
+    icon: PHP,
+    color: "#6181B6",
+  },
+  laravel: {
+    name: "Laravel",
+    icon: Lavarel,
+    color: "#FF2D20",
+  },
+  jquery: {
+    name: "jQuery",
+    icon: JQuery,
+    color: "#21609B",
+  },
+  mysql: {
+    name: "MySQL",
+    icon: MySQL,
+    color: "#F29111",
+  },
+  bootstrap: {
+    name: "Bootstrap",
+    icon: Bootstrap,
+    color: "#7E13F8",
+  },
+  csharp: {
+    name: "C#",
+    icon: CSharp,
+    color: "#1E9E25",
+  },
+  weka: {
+    name: "WEKA",
+    icon: WEKA,
+    color: "#222C37",
+  },
+  java: {
+    name: "Java",
+    icon: Java,
+    color: "#E76F00",
+  },
+  kotlin: {
+    name: "Kotlin",
+    icon: Kotlin,
+    color: "#C316E3",
+  },
+  android: {
+    name: "Android",
+    icon: Android,
+    color: "#3DDC84",
+  },
+  strapi: {
+    name: "Strapi",
+    icon: Strapi,
+    color: "#8E75FF",
+  },
+  git: {
+    name: "Git",
+    icon: Git,
+    color: "#DE4C36",
+  },
+  github: {
+    name: "Github",
+    icon: Github,
+    color: "#222C37",
+  },
+  npm: {
+    name: "npm",
+    icon: npm,
+    color: "#C12127",
+  },
+  yarn: {
+    name: "Yarn",
+    icon: Yarn,
+    color: "#368FB9",
+  },
+  pnpm: {
+    name: "pnpm",
+    icon: pnpm,
+    color: "#F9AD00",
+  },
+  webpack: {
+    name: "Webpack",
+    icon: Webpack,
+    color: "#8ED6FB",
+  },
+  javascript: {
+    name: "JavaScript",
+    icon: Javascript,
+    color: "#F7DF1E",
+  },
+  html: {
+    name: "HTML",
+    icon: HTML,
+    color: "#F16529",
+  },
+  css: {
+    name: "CSS",
+    icon: CSS,
+    color: "#2965F1",
+  },
+  windows: {
+    name: "Windows",
+    icon: Windows,
+    color: "#00ADEF",
+  },
+  linux: {
+    name: "Linux",
+    icon: Linux,
     color: "#222C37",
   },
 };

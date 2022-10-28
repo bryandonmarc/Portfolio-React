@@ -5,7 +5,13 @@ import useStyles from "./AboutPageTitle.styles";
 //   props: string;
 // }
 
-export function AboutPageTitle() {
+export function AboutPageTitle({
+  title,
+  emoji,
+}: {
+  title: string;
+  emoji: string;
+}) {
   // { props }: AboutPageTitleProps
   const { classes } = useStyles();
 
@@ -18,8 +24,9 @@ export function AboutPageTitle() {
           variant="gradient"
           inherit
         >
-          Journey
-        </Text>
+          {title}
+        </Text>{" "}
+        {emoji}
       </Title>
       {/* <Text size="sm" color="dimmed" className={classes.description}>
         Here are some of the projects I spearheaded and built.{" "}

@@ -6,17 +6,17 @@ import {
 import { List, Stepper, Text } from "@mantine/core";
 import { IconDiamond } from "@tabler/icons";
 import { HEADER_HEIGHT } from "../Header";
-import useStyles from "./AboutOrganism.styles";
+import useStyles from "./AboutPageJourney.styles";
 
-export interface AboutOrganismProps {
+export interface AboutPageJourneyProps {
   jobs: StepperContentProps[];
 }
 
-export function AboutOrganism({ jobs }: AboutOrganismProps) {
+export function AboutPageJourney({ jobs }: AboutPageJourneyProps) {
   const { classes, theme } = useStyles();
 
   return (
-    <Stepper active={0} orientation="vertical" classNames={classes}>
+    <Stepper active={0} orientation="vertical" classNames={classes} mb={216}>
       <Stepper.Step
         icon={
           <IconDiamond style={{ color: theme.colors[theme.primaryColor][4] }} />
@@ -38,8 +38,8 @@ export function AboutOrganism({ jobs }: AboutOrganismProps) {
       ></Stepper.Step>
       {jobs.map((job) => (
         <Stepper.Step
-          key={job.jobCompany}
-          label={job.jobCompany}
+          key={job.header}
+          label={job.header}
           description={<StepperContent {...job} />}
         ></Stepper.Step>
       ))}

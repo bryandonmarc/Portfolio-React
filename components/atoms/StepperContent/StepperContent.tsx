@@ -5,25 +5,25 @@ import { LanguageControl } from "../LanguageControl";
 import useStyles from "./StepperContent.styles";
 
 export interface StepperContentProps {
-  jobCompany: string;
-  jobTitle: string;
-  jobDate: string;
-  jobDescription: string[];
+  header: string;
+  title: string;
+  date: string;
+  description: string[];
   langs: Languages[];
 }
 
 export function StepperContent({
-  jobTitle,
-  jobDate,
-  jobDescription,
+  title,
+  date,
+  description,
   langs,
 }: StepperContentProps) {
   const { classes } = useStyles();
 
   return (
     <>
-      <JobTitle title={jobTitle} />
-      <Text>{jobDate}</Text>
+      <JobTitle title={title} />
+      <Text>{date}</Text>
 
       <List
         my="lg"
@@ -41,7 +41,7 @@ export function StepperContent({
           },
         }}
       >
-        {jobDescription.map((desc, i) => (
+        {description.map((desc, i) => (
           <List.Item key={i}>{desc}</List.Item>
         ))}
       </List>

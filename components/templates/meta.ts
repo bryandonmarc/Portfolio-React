@@ -66,7 +66,7 @@ export const projects: ProjectsProps[] = [
     src: projectPortfolio,
     alt: "Portfolio-Vue",
     href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
-    langs: ["vue", "typescript", "vite", "unocss", "pwa", "i18n", "aws"],
+    langs: ["vue", "typescript", "vite", "unocss", "i18n", "aws"],
     description:
       "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
   },

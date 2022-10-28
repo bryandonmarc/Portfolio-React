@@ -11,6 +11,9 @@ const default_list = [
   "nextjs",
   "vercel",
   "bash",
+  "weka",
+  "github",
+  "linux",
 ];
 
 export default createStyles(
@@ -35,8 +38,9 @@ export default createStyles(
 
     leftSection: {
       [`& > *`]: {
-        color:
-          theme.colorScheme === "dark" ? theme.white : languages[lang].color,
+        color: default_list.includes(lang)
+          ? theme.white
+          : languages[lang].color,
       },
 
       [theme.fn.smallerThan("xs")]: {

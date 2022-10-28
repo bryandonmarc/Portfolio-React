@@ -12,5 +12,8 @@ export type { ProjectProps } from "./Project";
 export { Projects } from "./Projects";
 export type { ProjectsProps } from "./Projects";
 
-export { AboutOrganism } from "./AboutOrganism";
-export type { AboutOrganismProps } from "./AboutOrganism";
+export { AboutPageJourney } from "./AboutPageJourney";
+export type { AboutPageJourneyProps } from "./AboutPageJourney";
+
+export { AboutPageEducation } from "./AboutPageEducation";
+ export type { AboutPageEducationProps } from "./AboutPageEducation";
