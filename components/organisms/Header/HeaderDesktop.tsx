@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useSpotlight } from "@mantine/spotlight";
 import { HeaderControls } from "@components/molecules";
-import { Logo } from "@components/atoms";
+import { UnstyledButton as Logo } from "@components/atoms";
 import useStyles from "./HeaderDesktop.styles";
 import { Affix, Header, Transition } from "@mantine/core";
 import { ScrollProp } from "./Header";
@@ -24,7 +24,7 @@ export function HeaderDesktop({ scrollDir }: ScrollProp) {
         }`}
       >
         <div className={classes.mainSection}>
-          <Logo />
+          <Logo link={"/"} label={"Home"} />
         </div>
 
         <HeaderControls pr="md" onSearch={spotlight.openSpotlight} />

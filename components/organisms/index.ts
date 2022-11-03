@@ -17,3 +17,6 @@ export type { AboutPageJourneyProps } from "./AboutPageJourney";
 
 export { AboutPageEducation } from "./AboutPageEducation";
  export type { AboutPageEducationProps } from "./AboutPageEducation";
+
+export { AboutPageHero } from "./AboutPageHero";
+ export type { AboutPageHeroProps } from "./AboutPageHero";

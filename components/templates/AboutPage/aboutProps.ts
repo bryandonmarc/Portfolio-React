@@ -1,6 +1,20 @@
 import { AboutPageProps } from "./AboutPage";
+import { meta } from "@components/templates";
 
 export const aboutProps: AboutPageProps = {
+  heroProps: {
+    title: {
+      name: meta.name,
+
+      titles: [
+        "Computer Scientist",
+        "Tech Enthusiast",
+        "Full-stack Engineer",
+        "Freelancer",
+      ],
+    },
+  },
+
   journeyProps: {
     jobs: [
       {
@@ -124,13 +138,21 @@ export const aboutProps: AboutPageProps = {
           "Developed a student's portal webpage targeted for incoming freshmen highlighting the SHS experience in MCL using Wix website builder",
         ],
         langs: [
-          "shopify",
-          "vue",
-          "tailwind",
+          "php",
+          "jquery",
+          "mysql",
+          "bootstrap",
+          "csharp",
           "python",
-          "sass",
-          "pwa",
-          "googleAnalytics",
+          "java",
+          "android",
+          "git",
+          "github",
+          "npm",
+          "webpack",
+          "javascript",
+          "html",
+          "css",
         ],
       },
     ],

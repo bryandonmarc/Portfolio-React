@@ -5,10 +5,10 @@ import useStyles from "./HeroTitle.styles";
 import { StaggeredTransition } from "@components/atoms";
 
 export interface HeroTitleProps {
-  heading: string;
+  heading?: string;
   name: string;
-  titles: string[];
-  description: string;
+  titles?: string[];
+  description?: string;
 }
 
 export function HeroTitle({
@@ -21,25 +21,29 @@ export function HeroTitle({
 
   return (
     <StaggeredTransition>
-      <Text
-        component="span"
-        variant="gradient"
-        gradient={{ from: "indigo", to: "grape" }}
-        className={cx(classes.header, classes.subheader)}
-        inherit
-      >
-        {heading}
-      </Text>
+      {heading && (
+        <Text
+          component="span"
+          variant="gradient"
+          gradient={{ from: "indigo", to: "grape" }}
+          className={cx(classes.header, classes.subheader)}
+          inherit
+        >
+          {heading}
+        </Text>
+      )}
 
       <Title className={cx(classes.header, classes.title)}>
         <TypewriterText text={name} />
       </Title>
 
-      <VerticalScrollingText textArray={titles} />
+      {titles && <VerticalScrollingText textArray={titles} />}
 
-      <Text className={classes.content} color="dimmed" mt="md">
-        {description}
-      </Text>
+      {description && (
+        <Text className={classes.content} color="dimmed" mt="md">
+          {description}
+        </Text>
+      )}
     </StaggeredTransition>
   );
 }

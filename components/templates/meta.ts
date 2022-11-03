@@ -62,22 +62,22 @@ export const projects: ProjectsProps[] = [
     description:
       "Experience a new way of learning for your students using this teaching companion service featuring gamified learning with a fun, interactive educational game! It also serves as a supplementary eLearning system with an integrated metric model on detecting, analyzing, and predicting learner engagement.",
   },
-  {
-    src: projectPortfolio,
-    alt: "Portfolio-Vue",
-    href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
-    langs: ["vue", "typescript", "vite", "unocss", "i18n", "aws"],
-    description:
-      "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
-  },
-  {
-    src: projectPortfolioReact,
-    alt: "Portfolio-React",
-    href: "https://portfolio-react-mu-six.vercel.app/",
-    langs: ["react", "nextjs", "typescript", "mantine", "vercel", "bash"],
-    description:
-      "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
-  },
+  // {
+  //   src: projectPortfolio,
+  //   alt: "Portfolio-Vue",
+  //   href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
+  //   langs: ["vue", "typescript", "vite", "unocss", "i18n", "aws"],
+  //   description:
+  //     "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
+  // },
+  // {
+  //   src: projectPortfolioReact,
+  //   alt: "Portfolio-React",
+  //   href: "https://portfolio-react-mu-six.vercel.app/",
+  //   langs: ["react", "nextjs", "typescript", "mantine", "vercel", "bash"],
+  //   description:
+  //     "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
+  // },
 ];
 
 const projectCardProps: {

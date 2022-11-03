@@ -13,7 +13,7 @@ import { ColorSchemeControl } from "@components/atoms";
 import useStyles from "./HeaderMobile.styles";
 import { ScrollProp } from "./Header";
 import { useWindowScroll } from "@mantine/hooks";
-import { Logo, SearchControlMobile } from "@components/atoms";
+import { UnstyledButton as Logo, SearchControlMobile } from "@components/atoms";
 import { useSpotlight } from "@mantine/spotlight";
 import { motion } from "framer-motion";
 
@@ -34,7 +34,7 @@ export function HeaderMobile({ scrollDir }: ScrollProp) {
         className={classes.header}
       >
         <Group className={classes.inner}>
-          <Logo />
+          <Logo link="/" label="Home" />
 
           <Group
             sx={(theme) => ({

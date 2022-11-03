@@ -2,7 +2,9 @@ export { GradientBackground } from "./GradientBackground";
 export { StaggeredTransition } from "./StaggeredTransition";
 
 export { HeaderControl } from "./HeaderControl";
-export { Logo } from "./Logo";
+export { UnstyledButton } from "./UnstyledButton";
+export type { UnstyledButtonProps } from "./UnstyledButton";
+
 export { SearchControl } from "./SearchControl";
 export {
   KofiControl,
@@ -36,7 +38,7 @@ export type { CarouselSlideProps } from "./CarouselSlide";
 export { LanguageControl } from "./LanguageControl";
 
 export { JobTitle } from "./JobTitle";
- export type { JobTitleProps } from "./JobTitle";
+export type { JobTitleProps } from "./JobTitle";
 
 export { StepperContent } from "./StepperContent";
- export type { StepperContentProps } from "./StepperContent";
+export type { StepperContentProps } from "./StepperContent";
