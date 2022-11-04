@@ -101,7 +101,7 @@ export function LayoutInner({ children }: LayoutProps) {
     <SpotlightProvider
       actions={getActions(router)}
       searchIcon={<IconSearch size={18} />}
-      searchPlaceholder="Search documentation"
+      searchPlaceholder="Search my portfolio"
       shortcut={["mod + K", "mod + P", "/"]}
       highlightQuery
       transition={{

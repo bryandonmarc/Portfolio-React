@@ -25,13 +25,12 @@ export function AboutPageJourney({ jobs }: AboutPageJourneyProps) {
         description={
           <>
             <JobTitle title="Future Job" />
-            {/* <Text mb="lg">
-              present – <i>future</i>
-            </Text> */}
-            <List my="lg" withPadding>
-              <List.Item>I am confident, my pamilee</List.Item>
-              <List.Item>Black is out, gold is in</List.Item>
-              <List.Item>Mabuting bata</List.Item>
+            <List my="lg" withPadding listStyleType="none" ml={20}>
+              <List.Item>
+                Put your company here! I am currently open to new opportunities.
+                I&apos;d be more than glad to finally find the right place to
+                let my passion and skills bloom! 🌺
+              </List.Item>
             </List>
           </>
         }

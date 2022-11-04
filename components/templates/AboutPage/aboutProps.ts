@@ -10,7 +10,7 @@ export const aboutProps: AboutPageProps = {
         "Computer Scientist",
         "Tech Enthusiast",
         "Full-stack Engineer",
-        "Freelancer",
+        "Communicator",
       ],
     },
   },

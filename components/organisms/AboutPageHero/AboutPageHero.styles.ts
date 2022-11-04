@@ -8,7 +8,7 @@ const spin = keyframes({
 export default createStyles((theme) => ({
   cover: {
     maxWidth: "100vw",
-    marginBottom: 32,
+    marginBottom: 108,
   },
 
   inner: {
