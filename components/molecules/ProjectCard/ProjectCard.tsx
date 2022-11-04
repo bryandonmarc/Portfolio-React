@@ -7,7 +7,7 @@ import {
 import { Languages } from "@components/templates";
 import { ActionIcon, Card, Group, Stack, Text } from "@mantine/core";
 import useStyles from "./ProjectCard.styles";
-import Image, { StaticImageData } from "next/future/image";
+import Image, { StaticImageData } from "next/image";
 import { IconExternalLink } from "@tabler/icons";
 import { useEventListener, useMergedRef } from "@mantine/hooks";
 import { useRef } from "react";

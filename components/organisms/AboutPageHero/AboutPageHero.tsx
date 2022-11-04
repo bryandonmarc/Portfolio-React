@@ -11,7 +11,7 @@ import {
   HeroTitle,
   HeroTitleProps,
 } from "@components/molecules";
-import Image from "next/future/image";
+import Image from "next/image";
 import img from "@assets/images/avatar/avatar-full-shirt-cropped.png";
 import { Center, Container, Group } from "@mantine/core";
 import useStyles from "./AboutPageHero.styles";

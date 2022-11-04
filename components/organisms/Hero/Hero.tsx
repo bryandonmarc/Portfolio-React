@@ -1,5 +1,5 @@
 import { Center, Container, Group } from "@mantine/core";
-import Image from "next/future/image";
+import Image from "next/image";
 import { HeroTitle, HeroContent, HeroActions } from "@components/molecules";
 import useStyles from "./Hero.styles";
 import img from "@assets/images/avatar/avatar-half-suit.png";

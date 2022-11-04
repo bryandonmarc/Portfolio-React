@@ -1,6 +1,6 @@
 import { Carousel } from "@mantine/carousel";
 import { Button, Paper, Title, Text, Box } from "@mantine/core";
-import Image, { StaticImageData } from "next/future/image";
+import Image, { StaticImageData } from "next/image";
 import useStyles, { fadeIn, fadeOut } from "./CarouselSlide.styles";
 import { useEventListener, useMergedRef } from "@mantine/hooks";
 import { useRef } from "react";

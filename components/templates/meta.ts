@@ -17,7 +17,7 @@ import {
   RenuLogo,
   SliderLogo,
 } from "@components/atoms";
-import { StaticImageData } from "next/future/image";
+import { StaticImageData } from "next/image";
 import { Languages } from "./languages";
 
 export interface ProjectsProps {
