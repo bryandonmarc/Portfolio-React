@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { HeaderDesktop } from "./HeaderDesktop";
 import { HeaderMobile } from "./HeaderMobile";
 import { useWindowEvent } from "@mantine/hooks";
+import { NavBar } from "../NavBar";
 
 export interface ScrollProp {
   scrollDir: string;
@@ -36,6 +37,7 @@ export function Header() {
     <>
       <HeaderDesktop scrollDir={scrollDir.current} />
       <HeaderMobile scrollDir={scrollDir.current} />
+      <NavBar scrollDir={scrollDir.current} />
     </>
   );
 }

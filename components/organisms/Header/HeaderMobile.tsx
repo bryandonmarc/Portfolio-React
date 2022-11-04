@@ -15,12 +15,7 @@ import { ScrollProp } from "./Header";
 import { useWindowScroll } from "@mantine/hooks";
 import { UnstyledButton as Logo, SearchControlMobile } from "@components/atoms";
 import { useSpotlight } from "@mantine/spotlight";
-import { motion } from "framer-motion";
-
-const variants = {
-  open: { opacity: 1, y: 0 },
-  closed: { opacity: 0, y: "-100%" },
-};
+import { HEADER_HEIGHT } from "./Header.styles";
 
 export function HeaderMobile({ scrollDir }: ScrollProp) {
   const { classes } = useStyles();
@@ -28,10 +23,11 @@ export function HeaderMobile({ scrollDir }: ScrollProp) {
 
   return (
     <Affix position={{ top: 0, left: 0 }}>
-      <motion.nav
-        animate={scrollDir === "up" ? "open" : "closed"}
-        variants={variants}
-        className={classes.header}
+      <Header
+        height={HEADER_HEIGHT}
+        className={`${classes.header} ${
+          scrollDir === "up" ? classes.open : classes.closed
+        }`}
       >
         <Group className={classes.inner}>
           <Logo link="/" label="Home" />
@@ -42,16 +38,12 @@ export function HeaderMobile({ scrollDir }: ScrollProp) {
                 marginLeft: theme.spacing.xs,
               },
             })}
-            // spacing="xs"
           >
             <SearchControlMobile onClick={spotlight.openSpotlight} />
             <ColorSchemeControl />
           </Group>
         </Group>
-      </motion.nav>
-      {/* <Transition transition="slide-down" mounted={}>
-        {(transitionStyles) => <Header style={transitionStyles}></Header>}
-      </Transition> */}
+      </Header>
     </Affix>
   );
 }

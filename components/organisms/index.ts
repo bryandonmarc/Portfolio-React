@@ -20,3 +20,6 @@ export { AboutPageEducation } from "./AboutPageEducation";
 
 export { AboutPageHero } from "./AboutPageHero";
  export type { AboutPageHeroProps } from "./AboutPageHero";
+
+export { NavBar } from "./NavBar";
+// export type { NavBarProps } from "./NavBar";
