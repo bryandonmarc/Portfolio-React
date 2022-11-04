@@ -1,8 +1,8 @@
 import React from "react";
 import useStyles from "./UnstyledButton.styles";
-import { NextLink } from "@mantine/next";
+import Link from "next/link";
 import { Icon3dCubeSphere as IconHome, TablerIcon } from "@tabler/icons";
-import { Anchor } from "@mantine/core";
+import { Anchor, Text } from "@mantine/core";
 import { Url } from "url";
 
 export interface UnstyledButtonProps {
@@ -23,18 +23,15 @@ export function UnstyledButton({
   return (
     <div className={classes.logoWrapper}>
       <div className={classes.logoContainer}>
-        <Anchor
-          component={NextLink}
-          href={link}
-          className={classes.logo}
-          aria-label={label}
-        >
-          {Icon ? (
-            <Icon size={size || 32}></Icon>
-          ) : (
-            <IconHome size={size || 32} />
-          )}
-        </Anchor>
+        <Link href={link} passHref>
+          <Anchor component="a" className={classes.logo} aria-label={label}>
+            {Icon ? (
+              <Icon size={size || 32}></Icon>
+            ) : (
+              <IconHome size={size || 32} />
+            )}
+          </Anchor>
+        </Link>
       </div>
     </div>
   );

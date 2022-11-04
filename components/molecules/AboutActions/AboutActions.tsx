@@ -4,7 +4,7 @@ import { IconDownload, TablerIcon } from "@tabler/icons";
 import { useRouter } from "next/router";
 import React from "react";
 import useStyles from "./AboutActions.styles";
-import { NextLink } from "@mantine/next";
+import Link from "next/link";
 export interface AboutActionsProps {
   primary: string;
   secondary: string;
@@ -31,7 +31,7 @@ export function AboutActions({
         radius="md"
         leftIcon={IconPrimary && <IconPrimary size={20} />}
         className={classes.control}
-        component={NextLink}
+        component={Link}
         href="/projects"
       >
         {primary}
