@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NextRouter, useRouter } from "next/router";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider, ContextModalProps } from "@mantine/modals";
@@ -15,6 +15,12 @@ import { Header } from "@components/organisms";
 
 import useStyles from "./Layout.styles";
 import { useWindowScroll } from "@mantine/hooks";
+import {
+  UserStateContext,
+  UserStateContextInterface,
+  UserStateProvider,
+  useUserState,
+} from "context/UserStateContext";
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -69,24 +75,39 @@ export interface LayoutProps {
 //   }, []);
 // }
 
-function getActions(router: NextRouter): SpotlightAction[] {
+function getActions({
+  router,
+  setPath,
+}: {
+  router: NextRouter;
+  setPath: (path: string) => void;
+}): SpotlightAction[] {
   return [
     {
       title: "Home",
       description: "Get to know me at first glance! 😊",
-      onTrigger: () => router.push("/"),
+      onTrigger: () => {
+        setPath("/");
+        router.push("/");
+      },
       icon: <IconHome size={18} />,
     },
     {
       title: "Projects",
       description: "See the projects I've worked on 😎",
-      onTrigger: () => router.push("/projects"),
+      onTrigger: () => {
+        setPath("/projects");
+        router.push("/projects");
+      },
       icon: <IconCategory2 size={18} />,
     },
     {
       title: "About",
       description: "Know more about me, my story, and my accomplishments! 💎",
-      onTrigger: () => router.push("/about"),
+      onTrigger: () => {
+        setPath("/about");
+        router.push("/about");
+      },
       icon: <IconBulb size={18} />,
     },
   ];
@@ -96,10 +117,11 @@ export function LayoutInner({ children }: LayoutProps) {
   const { classes, cx } = useStyles();
   const [scroll] = useWindowScroll();
   const router = useRouter();
+  const { setPath } = useUserState();
 
   return (
     <SpotlightProvider
-      actions={getActions(router)}
+      actions={getActions({ router, setPath })}
       searchIcon={<IconSearch size={18} />}
       searchPlaceholder="Search my portfolio"
       shortcut={["mod + K", "mod + P", "/"]}

@@ -5,12 +5,15 @@ import { ScrollProp } from "../Header/Header";
 import useStyles from "./NavBar.styles";
 import { useRouter } from "next/router";
 import { NAVBAR_BREAKPOINT } from "../Header";
+import { useContext } from "react";
+import { useUserState } from "context/UserStateContext";
 
 // export interface NavBarProps {
 //   props: string;
 // }
 
 export function NavBar({ scrollDir }: ScrollProp) {
+  const { path, setPath } = useUserState();
   const router = useRouter();
   const spotlight = useSpotlight();
   const { classes } = useStyles({
@@ -33,7 +36,11 @@ export function NavBar({ scrollDir }: ScrollProp) {
       })}
     >
       <SegmentedControl
-        onChange={(value) => router.push(value)}
+        onChange={(value) => {
+          setPath(value);
+          router.push(value);
+        }}
+        value={path}
         radius="md"
         size="lg"
         data={[
