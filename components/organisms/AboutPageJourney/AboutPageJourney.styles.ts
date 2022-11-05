@@ -21,7 +21,7 @@ export default createStyles((theme) => ({
         height: `50%`,
       },
     },
-    [`&:first-child`]: {
+    [`&:first-of-type`]: {
       [`.mantine-Stepper-verticalSeparator`]: {
         top: `50%`,
       },

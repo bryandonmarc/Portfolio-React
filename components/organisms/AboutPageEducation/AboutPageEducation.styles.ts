@@ -11,7 +11,7 @@ import { createStyles, keyframes, MantineColor } from "@mantine/core";
 
 export default createStyles((theme) => ({
   step: {
-    [`&:first-child`]: {
+    [`&:first-of-type`]: {
       [`.mantine-Stepper-verticalSeparator`]: {
         top: `50%`,
       },
