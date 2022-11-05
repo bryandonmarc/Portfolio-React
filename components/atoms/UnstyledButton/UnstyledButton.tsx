@@ -23,14 +23,12 @@ export function UnstyledButton({
   return (
     <div className={classes.logoWrapper}>
       <div className={classes.logoContainer}>
-        <Link href={link} passHref>
-          <Anchor component="a" className={classes.logo} aria-label={label}>
-            {Icon ? (
-              <Icon size={size || 32}></Icon>
-            ) : (
-              <IconHome size={size || 32} />
-            )}
-          </Anchor>
+        <Link href={link} className={classes.logo} aria-label={label}>
+          {Icon ? (
+            <Icon size={size || 32}></Icon>
+          ) : (
+            <IconHome size={size || 32} />
+          )}
         </Link>
       </div>
     </div>
