@@ -12,8 +12,6 @@ export default createStyles(
   ) => ({
     root: {
       zIndex: 6,
-      backgroundColor:
-        theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.white,
       boxShadow: `0 25px 50px -12px rgb(0 0 0 / 0.25)`,
       border: `1px solid ${
         theme.colorScheme === "dark"
@@ -21,6 +19,11 @@ export default createStyles(
           : theme.colors.gray[1]
       }`,
       ...(show ? state(spotlightOpen).open : state(spotlightOpen).closed),
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.fn.rgba(theme.colors.dark[7], 0.5)
+          : theme.fn.rgba(theme.white, 0.5),
+      backdropFilter: `blur(100px)`,
       transitionDuration: "250ms",
       transitionProperty: "opacity, transform",
       transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)",
