@@ -7,6 +7,7 @@ export function RenuLogo({
   unstyled,
   size,
   className,
+  opacity,
   ...others
 }: SliderLogoProps) {
   const { classes, cx } = useStyles(
