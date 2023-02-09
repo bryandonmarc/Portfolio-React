@@ -122,5 +122,5 @@ export const projectCards: ProjectCardProps[] = projects.map(
 );
 
 export const meta = {
-  name: "Zekken Yuuki",
+  name: "Donmarc Salcedo",
 };
