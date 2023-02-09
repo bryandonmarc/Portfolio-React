@@ -1,11 +1,11 @@
-import { Affix, Center, SegmentedControl, Tooltip } from "@mantine/core";
+import { Affix, Center, SegmentedControl } from "@mantine/core";
 import { useSpotlight } from "@mantine/spotlight";
 import { IconBulb, IconCategory2, IconHome } from "@tabler/icons";
 import { ScrollProp } from "../Header/Header";
 import useStyles from "./NavBar.styles";
 import { useRouter } from "next/router";
-import { NAVBAR_BREAKPOINT } from "../Header";
-import { useContext } from "react";
+// import { NAVBAR_BREAKPOINT } from "../Header";
+// import { useContext } from "react";
 import { useUserState } from "context/UserStateContext";
 
 // export interface NavBarProps {

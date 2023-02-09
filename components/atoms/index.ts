@@ -12,6 +12,7 @@ export {
   GithubControl,
   ColorSchemeControl,
   SearchControlMobile,
+  meta,
 } from "./HeaderControls";
 
 export { KofiIcon, LinkedInIcon, GithubIcon, ScrollIcon } from "./Icons";

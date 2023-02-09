@@ -9,6 +9,7 @@ import { LanguageControl } from "../LanguageControl";
 import { ProjectCardProps } from "@components/molecules";
 import { SliderLogo } from "@components/atoms";
 export interface CarouselSlideProps extends ProjectCardProps {
+  alt: string;
   gif: string | StaticImageData;
   color: string;
   Logo: SliderLogo;

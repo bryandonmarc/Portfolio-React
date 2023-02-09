@@ -13,17 +13,20 @@ import {
 } from "@components/molecules";
 import Image from "next/image";
 import img from "@assets/images/avatar/avatar-full-shirt-cropped.png";
-import { Center, Container, Group } from "@mantine/core";
+import { Center, Container, Group, Stack } from "@mantine/core";
 import useStyles from "./AboutPageHero.styles";
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons";
-import { meta } from "@components/templates";
-
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons";
+import { meta } from "@components/atoms";
+import Link from "next/link";
+import IconPhilippines from "@iconify-icons/twemoji/flag-philippines";
+import IconMail from "@iconify-icons/twemoji/open-mailbox-with-raised-flag";
+import { Icon as Iconify } from "@iconify/react/dist/offline";
 export interface AboutPageHeroProps {
   title: HeroTitleProps;
 }
 
 export function AboutPageHero({ title }: AboutPageHeroProps) {
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
 
   return (
     <Center component="section" className={classes.cover}>
@@ -45,17 +48,40 @@ export function AboutPageHero({ title }: AboutPageHeroProps) {
             align="start"
             sx={{ flexDirection: "column" }}
           >
-            <StaggeredTransition delay={[0, 3, 4]}>
+            <StaggeredTransition delay={[0, 3, 4, 5]}>
               <HeroTitle {...title} />
-              <Group mt={48}>
-                <UnstyledButton link={"#"} label="Email" Icon={IconMail} />
+              <Stack my={18} className={classes.contact} id="contact">
+                <Link className={classes.link} href={`mailto:${meta.email}`}>
+                  {meta.email}{" "}
+                  <Iconify
+                    icon={IconMail}
+                    style={{ marginLeft: theme.spacing.xs }}
+                  ></Iconify>
+                </Link>
+                <Link
+                  className={classes.link}
+                  href={`tel:${meta.phone.replace(/[\(\)\-\ ]+/g, "")}`}
+                >
+                  {meta.phone}{" "}
+                  <Iconify
+                    icon={IconPhilippines}
+                    style={{ marginLeft: theme.spacing.xs }}
+                  ></Iconify>
+                </Link>
+              </Stack>
+              <Group my={18}>
+                {/* <UnstyledButton
+                  link={`mailto:${meta.email}`}
+                  label="Email"
+                  Icon={IconMail}
+                /> */}
                 <UnstyledButton
-                  link={"#"}
+                  link={meta.githubLink}
                   label="Github"
                   Icon={IconBrandGithub}
                 />
                 <UnstyledButton
-                  link={"#"}
+                  link={meta.linkedInLink}
                   label="LinkedIn"
                   Icon={IconBrandLinkedin}
                 />

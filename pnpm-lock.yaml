@@ -8,6 +8,7 @@ specifiers:
   '@emotion/server': ^11.10.0
   '@iconify-icons/logos': ^1.2.19
   '@iconify-icons/mdi': ^1.2.32
+  '@iconify-icons/twemoji': ^1.2.8
   '@iconify/react': ^4.0.0
   '@mantine/carousel': ^5.7.0
   '@mantine/core': ^5.7.0
@@ -46,6 +47,7 @@ dependencies:
   '@emotion/server': 11.10.0
   '@iconify-icons/logos': 1.2.19
   '@iconify-icons/mdi': 1.2.32
+  '@iconify-icons/twemoji': 1.2.8
   '@iconify/react': 4.0.0_react@18.2.0
   '@mantine/carousel': 5.7.0_5ugl7lcgkto5b25o3sy34dlof4
   '@mantine/core': 5.7.0_busr4q5z43jqg55to3emxlc4oq
@@ -392,6 +394,12 @@ packages:
 
   /@iconify-icons/mdi/1.2.32:
     resolution: {integrity: sha512-LLXgR3qQVJdoXbv48d3iMWeQvMZOuSNRVdM/8tQeuepoGdmZXxgbPuLSPoe1s+DTP2N4aKRgsFKmz+Y9GyNAYg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-icons/twemoji/1.2.8:
+    resolution: {integrity: sha512-B12wK7BCloSuiemntXXoPRIQ+E/oZDBQNY6G9wRY4vHPESWpSaCM5fcaRUc8sE4zqiHvjA++oJt25ZJanD5j5Q==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

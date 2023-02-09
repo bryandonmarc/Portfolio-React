@@ -17,6 +17,7 @@ import Heroku from "@iconify-icons/logos/heroku-icon";
 import UnoCSS from "@iconify-icons/logos/unocss";
 import Vite from "@iconify-icons/logos/vitejs";
 import TypeScript from "@iconify-icons/logos/typescript-icon";
+import Partytown from "@iconify-icons/logos/partytown-icon";
 import AWS from "@iconify-icons/logos/aws";
 import i18n from "@iconify-icons/mdi/web";
 import React from "@iconify-icons/logos/react";
@@ -75,6 +76,7 @@ export type Languages =
   | "vite"
   | "unocss"
   | "typescript"
+  | "partytown"
   | "aws"
   | "i18n"
   | "react"
@@ -203,6 +205,11 @@ export const languages: {
     name: "TypeScript",
     icon: TypeScript,
     color: "#228BE6",
+  },
+  partytown: {
+    name: "Partytown",
+    icon: Partytown,
+    color: "#2E6AC8",
   },
   aws: {
     name: "AWS",

@@ -3,7 +3,7 @@ import { HeaderDesktop } from "./HeaderDesktop";
 import { HeaderMobile } from "./HeaderMobile";
 import { useWindowEvent } from "@mantine/hooks";
 import { NavBar } from "../NavBar";
-
+import { useRouter } from "next/router";
 export interface ScrollProp {
   scrollDir: string;
 }
@@ -13,6 +13,7 @@ export function Header() {
   const threshold = 0;
   let lastScrollY = useRef(0);
   let ticking = useRef(false);
+  const router = useRouter();
 
   const onScroll = useCallback(() => {
     if (!ticking.current) {
@@ -37,7 +38,9 @@ export function Header() {
     <>
       <HeaderDesktop scrollDir={scrollDir.current} />
       <HeaderMobile scrollDir={scrollDir.current} />
-      <NavBar scrollDir={scrollDir.current} />
+      {["/", "/projects", "/about"].includes(router.pathname) && (
+        <NavBar scrollDir={scrollDir.current} />
+      )}
     </>
   );
 }

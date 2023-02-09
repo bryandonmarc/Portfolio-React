@@ -7,6 +7,7 @@ import projectCovidTracker from "@assets/images/project/project-covidtracker.web
 import projectCovidTrackerGif from "@assets/images/project/project-covidtracker.gif";
 import projectEdutech from "@assets/images/project/project-edutech.webp";
 import projectEdutechGif from "@assets/images/project/project-edutech.gif";
+import projectSoy from "@assets/images/project/project-soy.webp";
 import projectPortfolio from "@assets/images/project/project-portfolio.webp";
 import projectPortfolioReact from "@assets/images/project/project-portfolio-react.webp";
 import {
@@ -62,22 +63,37 @@ export const projects: ProjectsProps[] = [
     description:
       "Experience a new way of learning for your students using this teaching companion service featuring gamified learning with a fun, interactive educational game! It also serves as a supplementary eLearning system with an integrated metric model on detecting, analyzing, and predicting learner engagement.",
   },
-  // {
-  //   src: projectPortfolio,
-  //   alt: "Portfolio-Vue",
-  //   href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
-  //   langs: ["vue", "typescript", "vite", "unocss", "i18n", "aws"],
-  //   description:
-  //     "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
-  // },
-  // {
-  //   src: projectPortfolioReact,
-  //   alt: "Portfolio-React",
-  //   href: "https://portfolio-react-mu-six.vercel.app/",
-  //   langs: ["react", "nextjs", "typescript", "mantine", "vercel", "bash"],
-  //   description:
-  //     "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
-  // },
+  {
+    src: projectSoy,
+    alt: "Soy 68 Candle",
+    href: "https://www.soy68candle.com/",
+    langs: [
+      "shopify",
+      "typescript",
+      "unocss",
+      "sass",
+      "partytown",
+      "googleAnalytics",
+    ],
+    description:
+      "Soy 68 Candle is a local Thai-owned business in California offering moisturizing candles made of Soy Oil, Shea Butter, Coconut Oil and Vitamin E, which melts into sensual organic oils and doubling as skincare. Their products are eco-friendly and made from Soy and Coconut food-grade wax in the USA, supporting local American farmers.",
+  },
+  {
+    src: projectPortfolio,
+    alt: "Portfolio-Vue",
+    href: "http://portfolio-site-vitesse.s3-website.ap-east-1.amazonaws.com/",
+    langs: ["vue", "typescript", "vite", "unocss", "i18n", "aws"],
+    description:
+      "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
+  },
+  {
+    src: projectPortfolioReact,
+    alt: "Portfolio-React",
+    href: "https://portfolio-react-mu-six.vercel.app/",
+    langs: ["react", "nextjs", "typescript", "mantine", "vercel", "bash"],
+    description:
+      "My past portfolio I've made with me exploring new web technologies and applying my learnings from my on-the-job training! Built with Vitesse and statically deployed on Amazon S3.",
+  },
 ];
 
 const projectCardProps: {

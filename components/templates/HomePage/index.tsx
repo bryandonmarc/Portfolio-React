@@ -5,6 +5,7 @@ import {
   AboutProps,
   Project,
   ProjectProps,
+  Contact,
 } from "@components/organisms";
 
 export interface HomePageProps {
@@ -23,6 +24,7 @@ export function HomePage({
       <Hero {...heroProps} />
       <About {...aboutProps} />
       <Project {...projectProps} />
+      <Contact />
     </>
   );
 }

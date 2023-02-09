@@ -85,6 +85,36 @@ export default createStyles((theme) => ({
     },
   },
 
+  contact: {
+    gap: theme.spacing.xs,
+    fontSize: theme.fontSizes.xl,
+    paddingLeft: theme.spacing.md,
+    marginLeft: theme.spacing.sm,
+    borderLeft: 4,
+    borderRight: 0,
+    borderTop: 0,
+    borderBottom: 0,
+    borderStyle: "solid",
+    borderColor: theme.colors[theme.primaryColor][4],
+  },
+
+  link: {
+    display: "inline-flex",
+    alignItems: "center",
+    transitionDuration: "150ms",
+    transitionProperty: "color, text-decoration-color",
+    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+    textDecoration: "underline",
+    textDecorationColor: "transparent",
+    textUnderlineOffset: 4,
+    textDecorationSkipInk: "auto",
+
+    [`&:hover`]: {
+      color: theme.colors[theme.primaryColor][4],
+      textDecorationColor: theme.colors[theme.primaryColor][4],
+    },
+  },
+
   image: {
     flex: 1,
     position: "relative",

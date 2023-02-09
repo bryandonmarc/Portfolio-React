@@ -3,3 +3,4 @@ export { LinkedInControl } from "./LinkedInControl";
 export { GithubControl } from "./GithubControl";
 export { ColorSchemeControl } from "./ColorSchemeControl";
 export { SearchControlMobile } from "./SearchControlMobile";
+export { meta } from "./meta";

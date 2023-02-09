@@ -23,3 +23,6 @@ export { AboutPageHero } from "./AboutPageHero";
 
 export { NavBar } from "./NavBar";
 // export type { NavBarProps } from "./NavBar";
+
+export { Contact } from "./Contact";
+// export type { ContactProps } from "./Contact";

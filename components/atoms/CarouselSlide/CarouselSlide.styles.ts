@@ -73,6 +73,7 @@ export default createStyles((theme, _, getRef) => ({
     objectFit: "cover",
     objectPosition: "center",
     display: "none",
+    backgroundColor: "white",
     // opacity: 0,
 
     animationDuration: "150ms",

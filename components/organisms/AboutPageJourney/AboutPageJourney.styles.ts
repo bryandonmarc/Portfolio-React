@@ -130,4 +130,8 @@ export default createStyles((theme) => ({
     //   fontSize: 28,
     // },
   },
+
+  stepBody: {
+    marginRight: 12,
+  },
 }));

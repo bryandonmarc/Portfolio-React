@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import useStyles from "./AboutActions.styles";
 import Link from "next/link";
+import { useUserState } from "context/UserStateContext";
 export interface AboutActionsProps {
   primary: string;
   secondary: string;
@@ -20,7 +21,7 @@ export function AboutActions({
 }: AboutActionsProps) {
   const { classes } = useStyles();
   const theme = useMantineTheme();
-  const router = useRouter();
+  const { setPath } = useUserState();
 
   return (
     <Group className={classes.wrapper}>
@@ -33,6 +34,7 @@ export function AboutActions({
         className={classes.control}
         component={Link}
         href="/projects"
+        onClick={() => setPath("/projects")}
       >
         {primary}
       </Button>
@@ -43,7 +45,9 @@ export function AboutActions({
         radius="md"
         leftIcon={IconSecondary && <IconSecondary size={20} />}
         className={classes.control}
-        onClick={openModal}
+        component={Link}
+        href="/about"
+        onClick={() => setPath("/about")}
         sx={(theme) => ({
           "&:hover": {
             color:
